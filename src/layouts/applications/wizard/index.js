@@ -38,7 +38,7 @@ import Account from "layouts/applications/wizard/components/Account";
 import Address from "layouts/applications/wizard/components/Address";
 
 function getSteps() {
-  return ["About", "Account", "Address"];
+  return ["КЛИЕНТ", "ГРУЗ", "АДРЕС"];
 }
 
 function getStepContent(stepIndex) {
@@ -65,46 +65,46 @@ function Wizard() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <MDBox pt={3} pb={8}>
-        <Grid container justifyContent="center" sx={{ my: 4 }}>
-          <Grid item xs={12} lg={8}>
-            <MDBox mt={6} mb={8} textAlign="center">
-              <MDBox mb={1}>
+      <MDBox pt={ 3 } pb={ 8 }>
+        <Grid container justifyContent="center" sx={ { my: 4 } }>
+          <Grid item xs={ 12 } lg={ 8 }>
+            <MDBox mt={ 6 } mb={ 8 } textAlign="center">
+              <MDBox mb={ 1 }>
                 <MDTypography variant="h3" fontWeight="bold">
-                  Build Your Profile
+                  Приемка груза
                 </MDTypography>
               </MDBox>
               <MDTypography variant="h5" fontWeight="regular" color="secondary">
-                This information will let us know more about you.
+                Заполните информацию о грузе.
               </MDTypography>
             </MDBox>
             <Card>
-              <MDBox mt={-3} mx={2}>
-                <Stepper activeStep={activeStep} alternativeLabel>
-                  {steps.map((label) => (
-                    <Step key={label}>
-                      <StepLabel>{label}</StepLabel>
+              <MDBox mt={ -3 } mx={ 2 }>
+                <Stepper activeStep={ activeStep } alternativeLabel >
+                  { steps.map((label) => (
+                    <Step key={ label }>
+                      <StepLabel>{ label }</StepLabel>
                     </Step>
-                  ))}
+                  )) }
                 </Stepper>
               </MDBox>
-              <MDBox p={2}>
+              <MDBox p={ 2 }>
                 <MDBox>
-                  {getStepContent(activeStep)}
-                  <MDBox mt={3} width="100%" display="flex" justifyContent="space-between">
-                    {activeStep === 0 ? (
+                  { getStepContent(activeStep) }
+                  <MDBox mt={ 3 } width="100%" display="flex" justifyContent="space-between">
+                    { activeStep === 0 ? (
                       <MDBox />
                     ) : (
-                      <MDButton variant="outlined" color="dark" onClick={handleBack}>
-                        back
+                      <MDButton variant="outlined" color="dark" onClick={ handleBack }>
+                        НАЗАД
                       </MDButton>
-                    )}
+                    ) }
                     <MDButton
                       variant="gradient"
                       color="dark"
-                      onClick={!isLastStep ? handleNext : undefined}
+                      onClick={ !isLastStep ? handleNext : undefined }
                     >
-                      {isLastStep ? "send" : "next"}
+                      { isLastStep ? "send" : "ДАЛЕЕ" }
                     </MDButton>
                   </MDBox>
                 </MDBox>

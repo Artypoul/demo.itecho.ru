@@ -33,40 +33,39 @@ import team2 from "assets/images/team-2.jpg";
 function About() {
   return (
     <MDBox>
-      <MDBox width="82%" textAlign="center" mx="auto" my={4}>
-        <MDBox mb={1}>
+      <MDBox width="82%" textAlign="center" mx="auto" my={ 4 }>
+        <MDBox mb={ 1 }>
           <MDTypography variant="h5" fontWeight="regular">
-            Let&apos;s start with the basic information
+            Заполните информацию о клиенте
           </MDTypography>
         </MDBox>
         <MDTypography variant="body2" color="text">
-          Let us know your name and email address. Use an address you don&apos;t mind other users
-          contacting you at
+          Введите пожалуйста Имя, Фамилию  и контактный номер
         </MDTypography>
       </MDBox>
-      <MDBox mt={2}>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={4} container justifyContent="center">
+      <MDBox mt={ 2 }>
+        <Grid container spacing={ 3 }>
+          <Grid item xs={ 12 } sm={ 4 } container justifyContent="center">
             <MDBox position="relative" height="max-content" mx="auto">
-              <MDAvatar src={team2} alt="profile picture" size="xxl" variant="rounded" />
-              <MDBox alt="spotify logo" position="absolute" right={0} bottom={0} mr={-1} mb={-1}>
+              <MDAvatar src={ team2 } alt="profile picture" size="xxl" variant="rounded" />
+              <MDBox alt="spotify logo" position="absolute" right={ 0 } bottom={ 0 } mr={ -1 } mb={ -1 }>
                 <Tooltip title="Edit" placement="top">
-                  <MDButton variant="gradient" color="info" size="small" iconOnly>
+                  <MDButton variant="gradient" color="primary" size="small" iconOnly>
                     <Icon>edit</Icon>
                   </MDButton>
                 </Tooltip>
               </MDBox>
             </MDBox>
           </Grid>
-          <Grid item xs={12} sm={8}>
-            <MDBox mb={2}>
-              <FormField type="text" label="First Name" />
+          <Grid item xs={ 12 } sm={ 8 }>
+            <MDBox mb={ 2 }>
+              <FormField type="text" label="Имя" />
             </MDBox>
-            <MDBox mb={2}>
-              <FormField type="text" label="Last Name" />
+            <MDBox mb={ 2 }>
+              <FormField type="text" label="Фамилия" />
             </MDBox>
             <MDBox>
-              <FormField type="email" label="Email Address" />
+              <FormField type="email" label="Номер телефона" />
             </MDBox>
           </Grid>
         </Grid>

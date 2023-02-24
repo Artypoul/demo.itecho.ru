@@ -37,24 +37,26 @@ function CoverLayout({ coverHeight, image, children }) {
   return (
     <PageLayout>
       <DefaultNavbar
-        routes={pageRoutes}
-        action={{
+        brand={ 'Itecho demo' }
+        routes={ pageRoutes }
+        action={ {
           type: "external",
-          route: "https://creative-tim.com/product/material-dashboard-pro-react",
-          label: "buy now",
-        }}
+          route: "https://itecho.ru",
+          label: "ЗАКАЗАТЬ",
+          color:'primary'
+        } }
         transparent
         light
       />
       <MDBox
         width="calc(100% - 2rem)"
-        minHeight={coverHeight}
+        minHeight={ coverHeight }
         borderRadius="xl"
-        mx={2}
-        my={2}
-        pt={6}
-        pb={28}
-        sx={{
+        mx={ 2 }
+        my={ 2 }
+        pt={ 6 }
+        pb={ 28 }
+        sx={ {
           backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
             image &&
             `${linearGradient(
@@ -64,12 +66,12 @@ function CoverLayout({ coverHeight, image, children }) {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-        }}
+        } }
       />
-      <MDBox mt={{ xs: -20, lg: -18 }} px={1} width="calc(100% - 2rem)" mx="auto">
-        <Grid container spacing={1} justifyContent="center">
-          <Grid item xs={11} sm={9} md={5} lg={4} xl={3}>
-            {children}
+      <MDBox mt={ { xs: -20, lg: -18 } } px={ 1 } width="calc(100% - 2rem)" mx="auto">
+        <Grid container spacing={ 1 } justifyContent="center">
+          <Grid item xs={ 11 } sm={ 9 } md={ 5 } lg={ 4 } xl={ 3 }>
+            { children }
           </Grid>
         </Grid>
       </MDBox>

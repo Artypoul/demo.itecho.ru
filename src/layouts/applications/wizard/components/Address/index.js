@@ -26,30 +26,29 @@ import FormField from "layouts/applications/wizard/components/FormField";
 function Address() {
   return (
     <MDBox>
-      <MDBox width="80%" textAlign="center" mx="auto" my={4}>
-        <MDBox mb={1}>
+      <MDBox width="80%" textAlign="center" mx="auto" my={ 4 }>
+        <MDBox mb={ 1 }>
           <MDTypography variant="h5" fontWeight="regular">
-            Are you living in a nice area?
+            Введите адрес доставки
           </MDTypography>
         </MDBox>
         <MDTypography variant="body2" color="text">
-          One thing I love about the later sunsets is the chance to go for a walk through the
-          neighborhood woods before dinner
+          Начните вводить адрес доставки с улицы, город и индекс подтянется автоматически
         </MDTypography>
       </MDBox>
-      <MDBox mt={2}>
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={8}>
-            <FormField type="text" label="Street Name" InputLabelProps={{ shrink: true }} />
+      <MDBox mt={ 2 }>
+        <Grid container spacing={ 3 }>
+          <Grid item xs={ 12 } md={ 8 }>
+            <FormField type="text" label="Улица" InputLabelProps={ { shrink: true } } />
           </Grid>
-          <Grid item xs={12} md={4}>
-            <FormField type="number" label="Street Number" InputLabelProps={{ shrink: true }} />
+          <Grid item xs={ 12 } md={ 4 }>
+            <FormField type="number" label="Индекс" InputLabelProps={ { shrink: true } } />
           </Grid>
-          <Grid item xs={12} md={7}>
-            <FormField type="text" label="City" InputLabelProps={{ shrink: true }} />
+          <Grid item xs={ 12 } md={ 7 }>
+            <FormField type="text" label="Город" InputLabelProps={ { shrink: true } } />
           </Grid>
-          <Grid item xs={12} md={5}>
-            <FormField type="text" label="Country" InputLabelProps={{ shrink: true }} />
+          <Grid item xs={ 12 } md={ 5 }>
+            <FormField type="text" label="Страна" InputLabelProps={ { shrink: true } } />
           </Grid>
         </Grid>
       </MDBox>

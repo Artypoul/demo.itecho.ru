@@ -46,19 +46,19 @@ import form from "layouts/pages/users/new-user/schemas/form";
 import initialValues from "layouts/pages/users/new-user/schemas/initialValues";
 
 function getSteps() {
-  return ["User Info", "Address", "Social", "Profile"];
+  return ["ИНОФРМАЦИЯ", "АДРЕС", "СОЦСЕТИ", "ПРОФИЛЬ"];
 }
 
 function getStepContent(stepIndex, formData) {
   switch (stepIndex) {
     case 0:
-      return <UserInfo formData={formData} />;
+      return <UserInfo formData={ formData } />;
     case 1:
-      return <Address formData={formData} />;
+      return <Address formData={ formData } />;
     case 2:
-      return <Socials formData={formData} />;
+      return <Socials formData={ formData } />;
     case 3:
-      return <Profile formData={formData} />;
+      return <Profile formData={ formData } />;
     default:
       return null;
   }
@@ -102,56 +102,57 @@ function NewUser() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <MDBox py={3} mb={20} height="65vh">
-        <Grid container justifyContent="center" alignItems="center" sx={{ height: "100%", mt: 8 }}>
-          <Grid item xs={12} lg={8}>
+      <MDBox py={ 3 } mb={ 20 } height="65vh">
+        <Grid container justifyContent="center" alignItems="center" sx={ { height: "100%", mt: 8 } }>
+          <Grid item xs={ 12 } lg={ 8 }>
             <Formik
-              initialValues={initialValues}
-              validationSchema={currentValidation}
-              onSubmit={handleSubmit}
+              initialValues={ initialValues }
+              validationSchema={ currentValidation }
+              onSubmit={ handleSubmit }
             >
-              {({ values, errors, touched, isSubmitting }) => (
-                <Form id={formId} autoComplete="off">
-                  <Card sx={{ height: "100%" }}>
-                    <MDBox mx={2} mt={-3}>
-                      <Stepper activeStep={activeStep} alternativeLabel>
-                        {steps.map((label) => (
-                          <Step key={label}>
-                            <StepLabel>{label}</StepLabel>
+              { ({ values, errors, touched, isSubmitting }) => (
+                <Form id={ formId } autoComplete="off">
+                  <Card sx={ { height: "100%" } }>
+                    <MDBox mx={ 2 } mt={ -3 }>
+                      <Stepper activeStep={ activeStep } alternativeLabel>
+                        { steps.map((label) => (
+                          <Step key={ label }>
+                            <StepLabel>{ label }</StepLabel>
                           </Step>
-                        ))}
+                        )) }
                       </Stepper>
                     </MDBox>
-                    <MDBox p={3}>
+                    <MDBox p={ 3 }>
                       <MDBox>
-                        {getStepContent(activeStep, {
+                        { getStepContent(activeStep, {
                           values,
                           touched,
                           formField,
                           errors,
-                        })}
-                        <MDBox mt={2} width="100%" display="flex" justifyContent="space-between">
-                          {activeStep === 0 ? (
+                        }) }
+                        <MDBox mt={ 2 } width="100%" display="flex" justifyContent="space-between">
+                          { activeStep === 0 ? (
                             <MDBox />
                           ) : (
-                            <MDButton variant="gradient" color="light" onClick={handleBack}>
-                              back
+                            <MDButton variant="gradient" color="light" onClick={ handleBack }>
+                              НАЗАД
                             </MDButton>
-                          )}
+                          )
+                          }
                           <MDButton
-                            disabled={isSubmitting}
+                            disabled={ isSubmitting }
                             type="submit"
                             variant="gradient"
                             color="dark"
                           >
-                            {isLastStep ? "send" : "next"}
+                            { isLastStep ? "send" : "ДАЛЕЕ" }
                           </MDButton>
                         </MDBox>
                       </MDBox>
                     </MDBox>
                   </Card>
                 </Form>
-              )}
+              ) }
             </Formik>
           </Grid>
         </Grid>

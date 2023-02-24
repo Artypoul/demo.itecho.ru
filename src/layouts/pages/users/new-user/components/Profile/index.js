@@ -34,28 +34,28 @@ function Profile({ formData }) {
   return (
     <MDBox>
       <MDTypography variant="h5" fontWeight="bold">
-        Profile
+        Профиль
       </MDTypography>
-      <MDBox mt={1.625}>
-        <Grid container spacing={1}>
-          <Grid item xs={12}>
+      <MDBox mt={ 1.625 }>
+        <Grid container spacing={ 1 }>
+          {/* <Grid item xs={ 12 }>
             <FormField
-              type={publicEmail.type}
-              label={publicEmail.label}
-              name={publicEmail.name}
-              value={publicEmailV}
-              placeholder={publicEmail.placeholder}
+              type={ publicEmail.type }
+              label={ publicEmail.label }
+              name={ publicEmail.name }
+              value={ publicEmailV }
+              placeholder={ publicEmail.placeholder }
             />
-          </Grid>
-          <Grid item xs={12}>
+          </Grid> */}
+          <Grid item xs={ 12 }>
             <FormField
-              type={bio.type}
-              label={bio.label}
-              name={bio.name}
-              value={bioV}
-              placeholder={bio.placeholder}
+              type={ bio.type }
+              label={ bio.label }
+              name={ bio.name }
+              value={ bioV }
+              placeholder={ bio.placeholder }
               multiline
-              rows={5}
+              rows={ 5 }
             />
           </Grid>
         </Grid>

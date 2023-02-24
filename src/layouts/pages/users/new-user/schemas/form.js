@@ -18,7 +18,7 @@ const form = {
   formField: {
     firstName: {
       name: "firstName",
-      label: "First Name",
+      label: "ФИО",
       type: "text",
       errorMsg: "First name is required.",
     },
@@ -30,15 +30,20 @@ const form = {
     },
     company: {
       name: "company",
-      label: "Company",
+      label: "ИНН",
       type: "text",
     },
     email: {
       name: "email",
-      label: "Email Address",
+      label: "Email ",
       type: "email",
       errorMsg: "Email address is required.",
       invalidMsg: "Your email address is invalid",
+    },
+    referal: {
+      name: "referal",
+      label: "Реферал",
+      type: "text",
     },
     password: {
       name: "password",
@@ -56,7 +61,7 @@ const form = {
     },
     address1: {
       name: "address1",
-      label: "Address 1",
+      label: "Улица, номер дома, индекс",
       type: "text",
       errorMsg: "Address is required.",
     },
@@ -94,6 +99,22 @@ const form = {
       label: "Instagram Account",
       type: "text",
     },
+    vk: {
+      name: "vk",
+      label: "ВК",
+      type: "text",
+      errorMsg: "Twitter profile is required.",
+    },
+    ok: {
+      name: "ok",
+      label: "Ок",
+      type: "text",
+    },
+    yapy: {
+      name: "yapy",
+      label: "yapy.ru",
+      type: "text",
+    },
     publicEmail: {
       name: "publicEmail",
       label: "Public Email",
@@ -101,7 +122,8 @@ const form = {
     },
     bio: {
       name: "bio",
-      label: "Bio",
+      label: "Say a few words about who you are or what you’re working on.",
+      // placeholder: 'Say a few words about who you are or what you’re working on.',
     },
   },
 };

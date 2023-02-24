@@ -35,7 +35,7 @@ import Icon from "@mui/material/Icon";
 
 const pageRoutes = [
   {
-    name: "pages",
+    name: "Страницы",
     columns: 3,
     rowsPerColumn: 2,
     collapse: [
@@ -125,7 +125,7 @@ const pageRoutes = [
     ],
   },
   {
-    name: "authenticaton",
+    name: "Авторизация",
     collapse: [
       {
         name: "sign in",
@@ -171,7 +171,7 @@ const pageRoutes = [
     ],
   },
   {
-    name: "application",
+    name: "Приложение",
     collapse: [
       {
         name: "kanban",
@@ -196,7 +196,7 @@ const pageRoutes = [
     ],
   },
   {
-    name: "ecommerce",
+    name: "Интгерации",
     columns: 2,
     rowsPerColumn: 1,
     collapse: [
@@ -235,7 +235,7 @@ const pageRoutes = [
     ],
   },
   {
-    name: "docs",
+    name: "Документ",
     collapse: [
       {
         name: "getting started",

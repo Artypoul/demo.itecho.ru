@@ -96,19 +96,19 @@ function DashboardNavbar({ absolute, light, isMini }) {
   // Render the notifications menu
   const renderMenu = () => (
     <Menu
-      anchorEl={openMenu}
-      anchorReference={null}
-      anchorOrigin={{
+      anchorEl={ openMenu }
+      anchorReference={ null }
+      anchorOrigin={ {
         vertical: "bottom",
         horizontal: "left",
-      }}
-      open={Boolean(openMenu)}
-      onClose={handleCloseMenu}
-      sx={{ mt: 2 }}
+      } }
+      open={ Boolean(openMenu) }
+      onClose={ handleCloseMenu }
+      sx={ { mt: 2 } }
     >
-      <NotificationItem icon={<Icon>email</Icon>} title="Check new messages" />
-      <NotificationItem icon={<Icon>podcasts</Icon>} title="Manage Podcast sessions" />
-      <NotificationItem icon={<Icon>shopping_cart</Icon>} title="Payment successfully completed" />
+      <NotificationItem icon={ <Icon>email</Icon> } title="Check new messages" />
+      <NotificationItem icon={ <Icon>podcasts</Icon> } title="Manage Podcast sessions" />
+      <NotificationItem icon={ <Icon>shopping_cart</Icon> } title="Payment successfully completed" />
     </Menu>
   );
 
@@ -127,68 +127,69 @@ function DashboardNavbar({ absolute, light, isMini }) {
 
   return (
     <AppBar
-      position={absolute ? "absolute" : navbarType}
+      position={ absolute ? "absolute" : navbarType }
       color="inherit"
-      sx={(theme) => navbar(theme, { transparentNavbar, absolute, light, darkMode })}
+      sx={ (theme) => navbar(theme, { transparentNavbar, absolute, light, darkMode }) }
     >
-      <Toolbar sx={(theme) => navbarContainer(theme)}>
-        <MDBox color="inherit" mb={{ xs: 1, md: 0 }} sx={(theme) => navbarRow(theme, { isMini })}>
-          <Breadcrumbs icon="home" title={route[route.length - 1]} route={route} light={light} />
-          <IconButton sx={navbarDesktopMenu} onClick={handleMiniSidenav} size="small" disableRipple>
-            <Icon fontSize="medium" sx={iconsStyle}>
-              {miniSidenav ? "menu_open" : "menu"}
+      <Toolbar sx={ (theme) => navbarContainer(theme) }>
+        <MDBox color="inherit" mb={ { xs: 1, md: 0 } } sx={ (theme) => navbarRow(theme, { isMini }) }>
+          {/* <Breadcrumbs icon="home" title={route[route.length - 1]} route={route} light={light} /> */ }
+          <Breadcrumbs icon="home" title={ 'Мастер приемки' } route={ route } light={ light } />
+          <IconButton sx={ navbarDesktopMenu } onClick={ handleMiniSidenav } size="small" disableRipple>
+            <Icon fontSize="medium" sx={ iconsStyle }>
+              { miniSidenav ? "menu_open" : "menu" }
             </Icon>
           </IconButton>
         </MDBox>
-        {isMini ? null : (
-          <MDBox sx={(theme) => navbarRow(theme, { isMini })}>
-            <MDBox pr={1}>
-              <MDInput label="Search here" />
+        { isMini ? null : (
+          <MDBox sx={ (theme) => navbarRow(theme, { isMini }) }>
+            <MDBox pr={ 1 }>
+              <MDInput label="Введите слово" />
             </MDBox>
-            <MDBox color={light ? "white" : "inherit"}>
+            <MDBox color={ light ? "white" : "inherit" }>
               <Link to="/authentication/sign-in/basic">
-                <IconButton sx={navbarIconButton} size="small" disableRipple>
-                  <Icon sx={iconsStyle}>account_circle</Icon>
+                <IconButton sx={ navbarIconButton } size="small" disableRipple>
+                  <Icon sx={ iconsStyle }>account_circle</Icon>
                 </IconButton>
               </Link>
               <IconButton
                 size="small"
                 disableRipple
                 color="inherit"
-                sx={navbarMobileMenu}
-                onClick={handleMiniSidenav}
+                sx={ navbarMobileMenu }
+                onClick={ handleMiniSidenav }
               >
-                <Icon sx={iconsStyle} fontSize="medium">
-                  {miniSidenav ? "menu_open" : "menu"}
+                <Icon sx={ iconsStyle } fontSize="medium">
+                  { miniSidenav ? "menu_open" : "menu" }
                 </Icon>
               </IconButton>
               <IconButton
                 size="small"
                 disableRipple
                 color="inherit"
-                sx={navbarIconButton}
-                onClick={handleConfiguratorOpen}
+                sx={ navbarIconButton }
+                onClick={ handleConfiguratorOpen }
               >
-                <Icon sx={iconsStyle}>settings</Icon>
+                <Icon sx={ iconsStyle }>settings</Icon>
               </IconButton>
               <IconButton
                 size="small"
                 disableRipple
                 color="inherit"
-                sx={navbarIconButton}
+                sx={ navbarIconButton }
                 aria-controls="notification-menu"
                 aria-haspopup="true"
                 variant="contained"
-                onClick={handleOpenMenu}
+                onClick={ handleOpenMenu }
               >
-                <MDBadge badgeContent={9} color="error" size="xs" circular>
-                  <Icon sx={iconsStyle}>notifications</Icon>
+                <MDBadge badgeContent={ 9 } color="error" size="xs" circular>
+                  <Icon sx={ iconsStyle }>notifications</Icon>
                 </MDBadge>
               </IconButton>
-              {renderMenu()}
+              { renderMenu() }
             </MDBox>
           </MDBox>
-        )}
+        ) }
       </Toolbar>
     </AppBar>
   );

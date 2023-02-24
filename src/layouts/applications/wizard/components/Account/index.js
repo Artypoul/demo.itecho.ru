@@ -63,60 +63,75 @@ function Account() {
 
   return (
     <MDBox>
-      <MDBox width="80%" textAlign="center" mx="auto" my={4}>
-        <MDBox mb={1}>
+      <MDBox width="80%" textAlign="center" mx="auto" my={ 4 }>
+        <MDBox mb={ 1 }>
           <MDTypography variant="h5" fontWeight="regular">
-            What are you doing? (checkboxes)
+          Введите характеристики груза
           </MDTypography>
         </MDBox>
-        <MDTypography variant="body2" color="text">
-          Give us more details about you. What do you enjoy doing in your spare time?
-        </MDTypography>
+        {/* <MDTypography variant="body2" color="text">
+          Заполните информацию о грузе.
+        </MDTypography> */}
       </MDBox>
-      <MDBox mt={2}>
-        <Grid container spacing={3} justifyContent="center">
-          <Grid item xs={12} sm={3}>
+      <MDBox mt={ 2 }>
+        <Grid container spacing={ 3 } justifyContent="center">
+          <Grid item xs={ 12 } sm={ 3 }>
             <MDBox textAlign="center">
               <MDButton
-                color="info"
-                variant={design ? "contained" : "outlined"}
-                onClick={handleSetDesign}
-                sx={customButtonStyles}
+                color="primary"
+                variant={ design ? "contained" : "outlined" }
+                onClick={ handleSetDesign }
+                sx={ customButtonStyles }
               >
-                <Icon sx={{ color: design ? "white" : "inherit" }}>brush</Icon>
+                <Icon sx={ { color: design ? "white" : "inherit" } }>brush</Icon>
               </MDButton>
-              <MDTypography variant="h6" sx={{ mt: 1 }}>
-                Design
+              <MDTypography variant="h6" sx={ { mt: 1 } }>
+              Длина
               </MDTypography>
             </MDBox>
           </Grid>
-          <Grid item xs={12} sm={3}>
+          <Grid item xs={ 12 } sm={ 3 }>
             <MDBox textAlign="center">
               <MDButton
-                color="info"
-                variant={code ? "contained" : "outlined"}
-                onClick={handleSetCode}
-                sx={customButtonStyles}
+                color="primary"
+                variant={ code ? "contained" : "outlined" }
+                onClick={ handleSetCode }
+                sx={ customButtonStyles }
               >
-                <Icon sx={{ color: design ? "white" : "inherit" }}>integration_instructions</Icon>
+                <Icon sx={ { color: design ? "white" : "inherit" } }>integration_instructions</Icon>
               </MDButton>
-              <MDTypography variant="h6" sx={{ mt: 1 }}>
-                Code
+              <MDTypography variant="h6" sx={ { mt: 1 } }>
+              Ширина
               </MDTypography>
             </MDBox>
           </Grid>
-          <Grid item xs={12} sm={3}>
+          <Grid item xs={ 12 } sm={ 3 }>
             <MDBox textAlign="center">
               <MDButton
-                color="info"
-                variant={develop ? "contained" : "outlined"}
-                onClick={handleSetDevelop}
-                sx={customButtonStyles}
+                color="primary"
+                variant={ develop ? "contained" : "outlined" }
+                onClick={ handleSetDevelop }
+                sx={ customButtonStyles }
               >
-                <Icon sx={{ color: design ? "white" : "inherit" }}>developer_mode</Icon>
+                <Icon sx={ { color: design ? "white" : "inherit" } }>developer_mode</Icon>
               </MDButton>
-              <MDTypography variant="h6" sx={{ mt: 1 }}>
-                Develop
+              <MDTypography variant="h6" sx={ { mt: 1 } }>
+              Высота
+              </MDTypography>
+            </MDBox>
+          </Grid>
+          <Grid item xs={ 12 } sm={ 3 }>
+            <MDBox textAlign="center">
+              <MDButton
+                color="primary"
+                variant={ develop ? "contained" : "outlined" }
+                onClick={ handleSetDevelop }
+                sx={ customButtonStyles }
+              >
+                <Icon sx={ { color: design ? "white" : "inherit" } }>developer_mode</Icon>
+              </MDButton>
+              <MDTypography variant="h6" sx={ { mt: 1 } }>
+              Вес
               </MDTypography>
             </MDBox>
           </Grid>

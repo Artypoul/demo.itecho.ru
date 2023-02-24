@@ -28,43 +28,46 @@ import FormField from "layouts/pages/users/new-user/components/FormField";
 
 function Socials({ formData }) {
   const { formField, values, errors, touched } = formData;
-  const { twitter, facebook, instagram } = formField;
-  const { twitter: twitterV, facebook: facebookV, instagram: instagramV } = values;
+  const { twitter, facebook, instagram, vk, ok, yapy } = formField;
+  const { twitter: twitterV, facebook: facebookV, instagram: instagramV, vk: vkV, ok: okV, yapy: yapyV } = values;
 
   return (
     <MDBox>
-      <MDTypography variant="h5" fontWeight="bold">
-        Socials
-      </MDTypography>
-      <MDBox mt={1.625}>
-        <Grid container spacing={1}>
-          <Grid item xs={12}>
+      <MDBox lineHeight={ 0 }>
+        <MDTypography variant="h5">Соцсети</MDTypography>
+        <MDTypography variant="button" color="text">
+          Введите пожалуйста ссылку на соцсети
+        </MDTypography>
+      </MDBox>
+      <MDBox mt={ 1.625 }>
+        <Grid container spacing={ 1 }>
+          <Grid item xs={ 12 }>
             <FormField
-              type={twitter.type}
-              label={twitter.label}
-              name={twitter.name}
-              value={twitterV}
-              placeholder={twitter.placeholder}
-              error={errors.twitter && touched.twitter}
-              success={twitterV.length > 0 && !errors.twitter}
+              type={ vk.type }
+              label={ vk.label }
+              name={ vk.name }
+              value={ vkV }
+              placeholder={ vk.placeholder }
+              error={ errors.vk && touched.vk }
+              success={ vkV.length > 0 && !errors.vk }
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={ 12 }>
             <FormField
-              type={facebook.type}
-              label={facebook.label}
-              name={facebook.name}
-              value={facebookV}
-              placeholder={facebook.placeholder}
+              type={ ok.type }
+              label={ ok.label }
+              name={ ok.name }
+              value={ okV }
+              placeholder={ ok.placeholder }
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={ 12 }>
             <FormField
-              type={instagram.type}
-              label={instagram.label}
-              name={instagram.name}
-              value={instagramV}
-              placeholder={instagram.placeholder}
+              type={ yapy.type }
+              label={ yapy.label }
+              name={ yapy.name }
+              value={ yapyV }
+              placeholder={ yapy.placeholder }
             />
           </Grid>
         </Grid>

@@ -32,41 +32,48 @@ function Footer({ light }) {
   const { size } = typography;
 
   return (
-    <MDBox position="absolute" width="100%" bottom={0} py={4}>
+    <MDBox position="absolute" width="100%" bottom={ 0 } py={ 4 }>
       <Container>
         <MDBox
           width="100%"
           display="flex"
-          flexDirection={{ xs: "column", lg: "row" }}
+          flexDirection={ { xs: "column", lg: "row" } }
           justifyContent="space-between"
           alignItems="center"
-          px={1.5}
+          px={ 1.5 }
         >
           <MDBox
             display="flex"
             justifyContent="center"
             alignItems="center"
             flexWrap="wrap"
-            color={light ? "white" : "text"}
-            fontSize={size.sm}
+            color={ light ? "white" : "text" }
+            fontSize={ size.sm }
+            gap={ 0.5 }
           >
-            &copy; {new Date().getFullYear()}, made with
-            <MDBox fontSize={size.md} color={light ? "white" : "dark"} mb={-0.5} mx={0.25}>
+            <MDTypography variant="button" color="text" fontWeight='regular'>
+              Itecho.ru, создано совместно с
+            </MDTypography>
+            <MDTypography variant="button" color="text" fontWeight='bold'>
+              Creative Tim
+            </MDTypography>
+            {/* &copy; { new Date().getFullYear() }, made with
+            <MDBox fontSize={ size.md } color={ light ? "white" : "dark" } mb={ -0.5 } mx={ 0.25 }>
               <Icon color="inherit" fontSize="inherit">
                 favorite
               </Icon>
             </MDBox>
             by
             <Link href="https://www.creative-tim.com/" target="_blank">
-              <MDTypography variant="button" fontWeight="medium" color={light ? "white" : "dark"}>
+              <MDTypography variant="button" fontWeight="medium" color={ light ? "white" : "dark" }>
                 &nbsp;Creative Tim&nbsp;
               </MDTypography>
             </Link>
-            for a better web.
+            for a better web. */}
           </MDBox>
           <MDBox
             component="ul"
-            sx={({ breakpoints }) => ({
+            sx={ ({ breakpoints }) => ({
               display: "flex",
               flexWrap: "wrap",
               alignItems: "center",
@@ -79,49 +86,49 @@ function Footer({ light }) {
               [breakpoints.up("lg")]: {
                 mt: 0,
               },
-            })}
+            }) }
           >
-            <MDBox component="li" pr={2} lineHeight={1}>
-              <Link href="https://www.creative-tim.com/" target="_blank">
+            <MDBox component="li" pr={ 2 } lineHeight={ 1 }>
+              <Link href="https://itecho.ru" target="_blank">
                 <MDTypography
                   variant="button"
                   fontWeight="regular"
-                  color={light ? "white" : "dark"}
+                  color={ light ? "white" : "dark" }
                 >
-                  Creative Tim
+                  itecho
                 </MDTypography>
               </Link>
             </MDBox>
-            <MDBox component="li" px={2} lineHeight={1}>
-              <Link href="https://www.creative-tim.com/presentation" target="_blank">
+            <MDBox component="li" px={ 2 } lineHeight={ 1 }>
+              <Link href="https://vk.com/itechogroup" target="_blank">
                 <MDTypography
                   variant="button"
                   fontWeight="regular"
-                  color={light ? "white" : "dark"}
+                  color={ light ? "white" : "dark" }
                 >
-                  About Us
+                  О нас
                 </MDTypography>
               </Link>
             </MDBox>
-            <MDBox component="li" px={2} lineHeight={1}>
-              <Link href="https://www.creative-tim.com/blog" target="_blank">
+            <MDBox component="li" px={ 2 } lineHeight={ 1 }>
+              <Link href="https://vk.com/itechogroup" target="_blank">
                 <MDTypography
                   variant="button"
                   fontWeight="regular"
-                  color={light ? "white" : "dark"}
+                  color={ light ? "white" : "dark" }
                 >
-                  Blog
+                  Блог
                 </MDTypography>
               </Link>
             </MDBox>
-            <MDBox component="li" pl={2} lineHeight={1}>
-              <Link href="https://www.creative-tim.com/license" target="_blank">
+            <MDBox component="li" pl={ 2 } lineHeight={ 1 }>
+              <Link href="https://itecho.ru" target="_blank">
                 <MDTypography
                   variant="button"
                   fontWeight="regular"
-                  color={light ? "white" : "dark"}
+                  color={ light ? "white" : "dark" }
                 >
-                  License
+                  Лицензия
                 </MDTypography>
               </Link>
             </MDBox>

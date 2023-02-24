@@ -28,11 +28,12 @@ import FormField from "layouts/pages/users/new-user/components/FormField";
 
 function UserInfo({ formData }) {
   const { formField, values, errors, touched } = formData;
-  const { firstName, lastName, company, email, password, repeatPassword } = formField;
+  const { firstName, lastName, company, referal, email, password, repeatPassword } = formField;
   const {
     firstName: firstNameV,
     lastName: lastNameV,
     company: companyV,
+    referal: referalV,
     email: emailV,
     password: passwordV,
     repeatPassword: repeatPasswordV,
@@ -40,84 +41,84 @@ function UserInfo({ formData }) {
 
   return (
     <MDBox>
-      <MDBox lineHeight={0}>
-        <MDTypography variant="h5">About me</MDTypography>
+      <MDBox lineHeight={ 0 }>
+        <MDTypography variant="h5">Карточка клиента</MDTypography>
         <MDTypography variant="button" color="text">
-          Mandatory informations
+          Заполните информацию о клиенте
         </MDTypography>
       </MDBox>
-      <MDBox mt={1.625}>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
+      <MDBox mt={ 1.625 }>
+        <Grid container spacing={ 3 }>
+          <Grid item xs={ 12 } sm={ 12 }>
             <FormField
-              type={firstName.type}
-              label={firstName.label}
-              name={firstName.name}
-              value={firstNameV}
-              placeholder={firstName.placeholder}
-              error={errors.firstName && touched.firstName}
-              success={firstNameV.length > 0 && !errors.firstName}
+              type={ firstName.type }
+              label={ firstName.label }
+              name={ firstName.name }
+              value={ firstNameV }
+              placeholder={ firstName.placeholder }
+              error={ errors.firstName && touched.firstName }
+              success={ firstNameV.length > 0 && !errors.firstName }
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          {/* <Grid item xs={ 12 } sm={ 6 }>
             <FormField
-              type={lastName.type}
-              label={lastName.label}
-              name={lastName.name}
-              value={lastNameV}
-              placeholder={lastName.placeholder}
-              error={errors.lastName && touched.lastName}
-              success={lastNameV.length > 0 && !errors.lastName}
+              type={ lastName.type }
+              label={ lastName.label }
+              name={ lastName.name }
+              value={ lastNameV }
+              placeholder={ lastName.placeholder }
+              error={ errors.lastName && touched.lastName }
+              success={ lastNameV.length > 0 && !errors.lastName }
+            />
+          </Grid> */}
+        </Grid>
+        <Grid container spacing={ 3 }>
+          <Grid item xs={ 12 } sm={ 6 }>
+            <FormField
+              type={ company.type }
+              label={ company.label }
+              name={ company.name }
+              value={ companyV }
+              placeholder={ company.placeholder }
+            />
+          </Grid>
+          <Grid item xs={ 12 } sm={ 6 }>
+            <FormField
+              type={ email.type }
+              label={ email.label }
+              name={ email.name }
+              value={ emailV }
+              placeholder={ email.placeholder }
+              error={ errors.email && touched.email }
+              success={ emailV.length > 0 && !errors.email }
             />
           </Grid>
         </Grid>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
+        <Grid container spacing={ 3 }>
+          <Grid item xs={ 12 } sm={ 6 }>
             <FormField
-              type={company.type}
-              label={company.label}
-              name={company.name}
-              value={companyV}
-              placeholder={company.placeholder}
+              type={ referal.type }
+              label={ referal.label }
+              name={ referal.name }
+              value={ referalV }
+              placeholder={ referal.placeholder }
+              error={ errors.referal && touched.referal }
+              success={ referalV.length > 0 && !errors.referal }
+              inputProps={ { autoComplete: "" } }
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          {/* <Grid item xs={ 12 } sm={ 6 }>
             <FormField
-              type={email.type}
-              label={email.label}
-              name={email.name}
-              value={emailV}
-              placeholder={email.placeholder}
-              error={errors.email && touched.email}
-              success={emailV.length > 0 && !errors.email}
+              type={ repeatPassword.type }
+              label={ repeatPassword.label }
+              name={ repeatPassword.name }
+              value={ repeatPasswordV }
+              placeholder={ repeatPassword.placeholder }
+              error={ errors.repeatPassword && touched.repeatPassword }
+              success={ repeatPasswordV.length > 0 && !errors.repeatPassword }
+              inputProps={ { autoComplete: "" } }
             />
-          </Grid>
-        </Grid>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
-            <FormField
-              type={password.type}
-              label={password.label}
-              name={password.name}
-              value={passwordV}
-              placeholder={password.placeholder}
-              error={errors.password && touched.password}
-              success={passwordV.length > 0 && !errors.password}
-              inputProps={{ autoComplete: "" }}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <FormField
-              type={repeatPassword.type}
-              label={repeatPassword.label}
-              name={repeatPassword.name}
-              value={repeatPasswordV}
-              placeholder={repeatPassword.placeholder}
-              error={errors.repeatPassword && touched.repeatPassword}
-              success={repeatPasswordV.length > 0 && !errors.repeatPassword}
-              inputProps={{ autoComplete: "" }}
-            />
-          </Grid>
+          </Grid> */}
         </Grid>
       </MDBox>
     </MDBox>
