@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Material Dashboard 2 React - v2.1.0
+* Material Dashboard 2 PRO React - v2.1.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
+* Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
 * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -29,7 +29,7 @@ import Icon from "@mui/material/Icon";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
-// Material Dashboard 2 React components
+// Material Dashboard 2 PRO React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
@@ -37,12 +37,13 @@ import MDButton from "components/MDButton";
 // Custom styles for the Configurator
 import ConfiguratorRoot from "examples/Configurator/ConfiguratorRoot";
 
-// Material Dashboard 2 React context
+// Material Dashboard 2 PRO React context
 import {
   useMaterialUIController,
   setOpenConfigurator,
   setTransparentSidenav,
   setWhiteSidenav,
+  setMiniSidenav,
   setFixedNavbar,
   setSidenavColor,
   setDarkMode,
@@ -52,6 +53,7 @@ function Configurator() {
   const [controller, dispatch] = useMaterialUIController();
   const {
     openConfigurator,
+    miniSidenav,
     fixedNavbar,
     sidenavColor,
     transparentSidenav,
@@ -91,6 +93,7 @@ function Configurator() {
     setWhiteSidenav(dispatch, false);
     setTransparentSidenav(dispatch, false);
   };
+  const handleMiniSidenav = () => setMiniSidenav(dispatch, !miniSidenav);
   const handleFixedNavbar = () => setFixedNavbar(dispatch, !fixedNavbar);
   const handleDarkMode = () => setDarkMode(dispatch, !darkMode);
 
@@ -280,12 +283,44 @@ function Configurator() {
         </MDBox>
         <Divider />
         <MDBox display="flex" justifyContent="space-between" alignItems="center" lineHeight={1}>
+          <MDTypography variant="h6">Sidenav Mini</MDTypography>
+
+          <Switch checked={miniSidenav} onChange={handleMiniSidenav} />
+        </MDBox>
+        <Divider />
+        <MDBox display="flex" justifyContent="space-between" alignItems="center" lineHeight={1}>
           <MDTypography variant="h6">Light / Dark</MDTypography>
 
           <Switch checked={darkMode} onChange={handleDarkMode} />
         </MDBox>
         <Divider />
         <MDBox mt={3} mb={2}>
+          <MDBox mb={2}>
+            <MDButton
+              component={Link}
+              href="https://www.creative-tim.com/product/material-dashboard-pro-react"
+              target="_blank"
+              rel="noreferrer"
+              color="info"
+              variant="gradient"
+              fullWidth
+            >
+              buy now
+            </MDButton>
+          </MDBox>
+          <MDBox mb={2}>
+            <MDButton
+              component={Link}
+              href="https://www.creative-tim.com/product/material-dashboard-2-pro-react-ts"
+              target="_blank"
+              rel="noreferrer"
+              color="dark"
+              variant="gradient"
+              fullWidth
+            >
+              buy typescript version
+            </MDButton>
+          </MDBox>
           <MDButton
             component={Link}
             href="https://www.creative-tim.com/learning-lab/react/quick-start/material-dashboard/"
@@ -300,11 +335,11 @@ function Configurator() {
         </MDBox>
         <MDBox display="flex" justifyContent="center">
           <GitHubButton
-            href="https://github.com/creativetimofficial/material-dashboard-react"
+            href="https://github.com/creativetimofficial/ct-material-dashboard-pro-react"
             data-icon="octicon-star"
             data-size="large"
             data-show-count="true"
-            aria-label="Star creativetimofficial/material-dashboard-react on GitHub"
+            aria-label="Star creativetimofficial/ct-material-dashboard-pro-react on GitHub"
           >
             Star
           </GitHubButton>
@@ -318,7 +353,7 @@ function Configurator() {
             <MDBox mr={1.5}>
               <MDButton
                 component={Link}
-                href="//twitter.com/intent/tweet?text=Check%20Material%20Dashboard%20React%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23react%20%mui&url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fmaterial-dashboard-react"
+                href="//twitter.com/intent/tweet?text=Check%20Material%20Dashboard%202%20PRO%20React%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23react%20%mui&url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fmaterial-dashboard-pro-react"
                 target="_blank"
                 rel="noreferrer"
                 color="dark"
@@ -329,7 +364,7 @@ function Configurator() {
             </MDBox>
             <MDButton
               component={Link}
-              href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-dashboard-react"
+              href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-dashboard-pro-react"
               target="_blank"
               rel="noreferrer"
               color="dark"

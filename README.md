@@ -1,15 +1,15 @@
-# [Material Dashboard 2 React](http://demos.creative-tim.com/material-dashboard-react/#/dashboard?ref=readme-mdr) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/material-dashboard-react&text=Check%20Material%20Dashboard%202%20react%20made%20by%20@CreativeTim%20#webdesign%20#dashboard%20#materialdesign%20#react%20https://www.creative-tim.com/product/material-dashboard-react)
+# [Material Dashboard 2 PRO React](http://demos.creative-tim.com/material-dashboard-pro-react/#/dashboards/analytics?ref=readme-mdpr) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/material-dashboard-pro-react&text=Check%20Material%20Dashboard%202%20Pro%React%20made%20by%20@CreativeTim%20#webdesign%20#dashboard%20#materialdesign%20#react%20https://www.creative-tim.com/product/material-dashboard-pro-react)
 
-![version](https://img.shields.io/badge/version-2.1.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/material-dashboard-react.svg)](https://github.com/creativetimofficial/material-dashboard-react/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/material-dashboard-react.svg)](https://github.com/creativetimofficial/material-dashboard-react/issues?q=is%3Aissue+is%3Aclosed)
+![version](https://img.shields.io/badge/version-2.1.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/ct-material-dashboard-pro-react.svg)](https://github.com/creativetimofficial/ct-material-dashboard-pro-react/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/ct-material-dashboard-pro-react.svg)](https://github.com/creativetimofficial/ct-material-dashboard-pro-react/issues?q=is%3Aissue+is%3Aclosed)
 
-![Image](https://s3.amazonaws.com/creativetim_bucket/products/71/original/material-dashboard-react.jpg?1638950990)
+![Image](https://s3.amazonaws.com/creativetim_bucket/products/80/original/material-dashboard-pro-react.jpg?1638882410)
 
-Material Dashboard 2 React is our newest free MUI Admin Template based on React. If you’re a developer looking to create an admin dashboard that is developer-friendly, rich with features, and highly customisable, here is your match. Our innovative MUI & React dashboard comes with a beautiful design inspired by Google's Material Design and it will help you create stunning websites & web apps to delight your clients.
+Material Dashboard 2 PRO React is our newest premium MUI Admin Template based on React. If you’re a developer looking to create an admin dashboard that is developer-friendly, rich with features, and highly customisable, here is your match. Our innovative MUI & React dashboard comes with a beautiful design inspired by Google's Material Design and it will help you create stunning websites & web apps to delight your clients.
 
 **Fully Coded Elements**
-Material Dashboard 2 React is built with over 70 frontend individual elements, like buttons, inputs, navbars, nav tabs, cards, or alerts, giving you the freedom of choosing and combining. All components can take variations in color, which you can easily modify using MUI styled() API and sx prop. You will save a lot of time going from prototyping to full-functional code because all elements are implemented.
+Material Dashboard 2 PRO React is built with over 200 frontend individual elements, like buttons, inputs, navbars, nav tabs, cards, or alerts, giving you the freedom of choosing and combining. All components can take variations in color, which you can easily modify using MUI styled() API and sx prop. You will save a lot of time going from prototyping to full-functional code because all elements are implemented.
 
-This free MUI & React Dashboard is coming with prebuilt design blocks, so the development process is seamless,
+This Premium MUI & React Dashboard is coming with prebuilt design blocks, so the development process is seamless,
 switching from our pages to the real website is very easy to be done.
 
 View [all components here](https://www.creative-tim.com/learning-lab/react/alerts/material-dashboard/).
@@ -24,11 +24,11 @@ You can read more about the [documentation here](https://www.creative-tim.com/le
 
 If you want to get inspiration or just show something directly to your clients, you can jump-start your development with our pre-built example pages. You will be able to quickly set up the basic structure for your web project.
 
-View [example pages here](https://demos.creative-tim.com/material-dashboard-react/#/dashboard).
+View [example pages here](https://demos.creative-tim.com/material-dashboard-pro-react/#/dashboards/analytics).
 
 **HELPFUL LINKS**
 
-- View [Github Repository](https://github.com/creativetimofficial/material-dashboard-react)
+- View [Github Repository](https://github.com/creativetimofficial/ct-material-dashboard-pro-react)
 - Check [FAQ Page](https://www.creative-tim.com/faq)
 
 #### Special thanks
@@ -36,8 +36,18 @@ View [example pages here](https://demos.creative-tim.com/material-dashboard-reac
 During the development of this dashboard, we have used many existing resources from awesome developers. We want to thank them for providing their tools open source:
 
 - [MUI](https://mui.com/) - The React UI library for faster and easier web development.
+- [React Table](https://react-table.tanstack.com/) - Lightweight and extensible data tables for React.
+- [React Flatpickr](https://github.com/haoxins/react-flatpickr) - Useful library used to select date.
 - [React ChartJS 2](http://reactchartjs.github.io/react-chartjs-2/#/) - Simple yet flexible React charting for designers & developers.
+- [Full Calendar](https://fullcalendar.io/) - Full-sized drag & drop event calendar.
+- [Dropzone](https://www.dropzonejs.com/) - An open source library that provides drag & drop file uploads with image previews.
+- [React Kanban](https://github.com/asseinfo/react-kanban) - Kanban/Trello board lib for React.
+- [React Images Viewer](https://guonanci.github.io/react-images-viewer/) - A simple, responsive images viewer component for ReactJS.
+- [React Quill](https://github.com/zenoamaro/react-quill) - A free, open source WYSIWYG editor built for the modern web.
+- [Formik](https://formik.org/) - Formik is the world's most popular open source form library for React and React Native.
 - [ChromaJS](https://gka.github.io/chroma.js/) - A small-ish zero-dependency JavaScript library for all kinds of color conversions and color scales.
+- [UUID](https://github.com/uuidjs/uuid) - JavaScript library for generating random id numbers.
+- [HTML React Parser](https://github.com/remarkablemark/html-react-parser) - A utility for converting HTML strings into React components.
 
 Let us know your thoughts below. And good luck with development!
 
@@ -57,28 +67,33 @@ Let us know your thoughts below. And good luck with development!
 
 ## Versions
 
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard-react?ref=readme-mdr)
+[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react-logo.png" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard-pro-react?ref=readme-mdpr)
+[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/typescript.png" width="60" height="60" />](https://www.creative-tim.com/product/material-dashboard-2-pro-react-ts?ref=readme-mdpr)
 
-| React |
-| ----- |
-
-| [![Material Dashboard React](https://s3.amazonaws.com/creativetim_bucket/products/71/thumb/material-dashboard-react.jpg?1638950990)](http://demos.creative-tim.com/material-dashboard-react/#/dashboard?ref=readme-mdr)
+| React                                                                                                                                                                                                                                  | TypeScript                                                                                                                                                                                                                                                 |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Material Dashboard 2 PRO React](https://s3.amazonaws.com/creativetim_bucket/products/80/thumb/material-dashboard-pro-react.jpg)](http://demos.creative-tim.com/material-dashboard-pro-react/#/dashboards/analytics?ref=readme-mdpr) | [![Material Dashboard 2 PRO React TS](https://s3.amazonaws.com/creativetim_bucket/products/594/thumb/material-dashboard-pro-react-typescript.jpg)](http://demos.creative-tim.com/material-dashboard-2-pro-react-ts/#/dashboards/analytics?ref=readme-mdpr) |
 
 ## Demo
 
-- [Dashboard](http://demos.creative-tim.com/material-dashboard-react/#/dashboard?ref=readme-sudr)
-- [Profile](https://demos.creative-tim.com/material-dashboard-react/#/profile?ref=readme-sudr)
-- [RTL](https://demos.creative-tim.com/material-dashboard-react/#/rtl?ref=readme-sudr)
-- [Sign In](https://demos.creative-tim.com/material-dashboard-react/#/authentication/sign-in?ref=readme-sudr)
-- [Sign Up](https://demos.creative-tim.com/material-dashboard-react/#/authentication/sign-up?ref=readme-sudr)
+- [Dashboard](http://demos.creative-tim.com/material-dashboard-pro-react/#/dashboards/analytics?ref=readme-mdpr)
+- [Sales](http://demos.creative-tim.com/material-dashboard-pro-react/#/dashboards/sales?ref=readme-mdpr)
+- [Profile](https://demos.creative-tim.com/material-dashboard-pro-react/#/pages/profile/profile-overview?ref=readme-mdpr)
+- [Account](https://demos.creative-tim.com/material-dashboard-pro-react/#/pages/account/settings?ref=readme-mdpr)
+- [RTL](https://demos.creative-tim.com/material-dashboard-pro-react/#/pages/rtl?ref=readme-mdpr)
+- [Applications](https://demos.creative-tim.com/material-dashboard-pro-react/#/applications/kanban?ref=readme-mdpr)
+- [Ecommerce](https://demos.creative-tim.com/material-dashboard-pro-react/#/ecommerce/products/product-page?ref=readme-mdpr)
+- [Sign In](https://demos.creative-tim.com/material-dashboard-pro-react/#/authentication/sign-in/basic?ref=readme-mdpr)
+- [Sign Up](https://demos.creative-tim.com/material-dashboard-pro-react/#/authentication/sign-up/cover?ref=readme-mdpr)
 
-[View More](https://demos.creative-tim.com/material-dashboard-react/#/dashboard?ref=readme-mdr).
+[View More](https://demos.creative-tim.com/material-dashboard-pro-react/#/dashboards/analytics?ref=readme-mdpr).
 
 ## Quick start
 
 Quick start options:
 
-- Download from [Creative Tim](https://www.creative-tim.com/product/material-dashboard-react?ref=readme-mdr).
+- Buy React Version from [Creative Tim](https://www.creative-tim.com/product/material-dashboard-pro-react?ref=readme-mdpr).
+- Buy React + TypeScript Version from [Creative Tim](https://www.creative-tim.com/product/material-dashboard-2-pro-react-ts?ref=readme-mdpr).
 
 ## Terminal Commands
 
@@ -87,14 +102,14 @@ Quick start options:
 
 ## Documentation
 
-The documentation for the Material Dashboard is hosted at our [website](https://www.creative-tim.com/learning-lab/react/overview/material-dashboard/?ref=readme-mdr).
+The documentation for the Material Dashboard is hosted at our [website](https://www.creative-tim.com/learning-lab/react/overview/material-dashboard/?ref=readme-mdpr).
 
 ### What's included
 
 Within the download you'll find the following directories and files:
 
 ```
-material-dashboard-react
+material-dashboard-2-pro-react
     ├── public
     │   ├── apple-icon.png
     │   ├── favicon.png
@@ -104,12 +119,12 @@ material-dashboard-react
     ├── src
     │   ├── assets
     │   │   ├── images
-    │   │   └── theme
-    │   │       ├── base
-    │   │       ├── components
-    │   │       ├── functions
-    │   │       ├── index.js
-    │   │       └── theme-rtl.js
+    │   │   ├── theme
+    │   │   │   ├── base
+    │   │   │   ├── components
+    │   │   │   ├── functions
+    │   │   │   ├── index.js
+    │   │   │   └── theme-rtl.js
     │   │   └── theme-dark
     │   │       ├── base
     │   │       ├── components
@@ -120,16 +135,22 @@ material-dashboard-react
     │   │   ├── MDAlert
     │   │   ├── MDAvatar
     │   │   ├── MDBadge
+    │   │   ├── MDBadgeDot
     │   │   ├── MDBox
     │   │   ├── MDButton
+    │   │   ├── MDDatePicker
+    │   │   ├── MDDropzone
+    │   │   ├── MDEditor
     │   │   ├── MDInput
     │   │   ├── MDPagination
     │   │   ├── MDProgress
     │   │   ├── MDSnackbar
+    │   │   ├── MDSocialButton
     │   │   └── MDTypography
     │   ├── context
     │   ├── examples
     │   │   ├── Breadcrumbs
+    │   │   ├── Calendar
     │   │   ├── Cards
     │   │   ├── Charts
     │   │   ├── Configurator
@@ -142,22 +163,41 @@ material-dashboard-react
     │   │   ├── Tables
     │   │   └── Timeline
     │   ├── layouts
+    │   │   ├── applications
+    │   │   │    ├── calendar
+    │   │   │    ├── data-tables
+    │   │   │    ├── kanban
+    │   │   │    └── wizard
     │   │   ├── authentication
-    │   │   ├── billing
-    │   │   ├── dashboard
-    │   │   ├── notifications
-    │   │   ├── profile
-    │   │   ├── rtl
-    │   │   └── tables
+    │   │   │    ├── components
+    │   │   │    ├── reset-password
+    │   │   │    ├── sign-in
+    │   │   │    └── sign-up
+    │   │   ├── dashboards
+    │   │   │    ├── analytics
+    │   │   │    └── sales
+    │   │   ├── ecommerce
+    │   │   │    ├── orders
+    │   │   │    └── products
+    │   │   └── pages
+    │   │        ├── account
+    │   │        ├── charts
+    │   │        ├── notifications
+    │   │        ├── pricing-page
+    │   │        ├── profile
+    │   │        ├── projects
+    │   │        ├── rtl
+    │   │        ├── users
+    │   │        └── widgets
     │   ├── App.js
     │   ├── index.js
+    │   ├── page.routes.js
     │   └── routes.js
     ├── .eslintrc.json
     ├── .prettierrc.json
     ├── CHANGELOG.md
     ├── ISSUE_TEMPLATE.md
     ├── jsconfig.json
-    ├── LICENSE.md
     ├── package.json
     └── README.md
 ```
@@ -170,39 +210,39 @@ At present, we officially aim to support the last two versions of the following 
 
 ## Resources
 
-- [Live Preview](https://demos.creative-tim.com/material-dashboard-react/#/dashboard?ref=readme-mdr)
-- [Download Page](https://www.creative-tim.com/product/material-dashboard-react?ref=readme-mdr)
-- Documentation is [here](https://www.creative-tim.com/learning-lab/react/overview/material-dashboard/?ref=readme-mdr)
-- [License Agreement](https://www.creative-tim.com/license?ref=readme-mdr)
-- [Support](https://www.creative-tim.com/contact-us?ref=readme-mdr)
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/material-dashboard-react/issues)
+- [Live Preview](https://demos.creative-tim.com/material-dashboard-pro-react/#/dashboards/analytics?ref=readme-mdpr)
+- [Buy Page](https://www.creative-tim.com/product/material-dashboard-pro-react?ref=readme-mdpr)
+- Documentation is [here](https://www.creative-tim.com/learning-lab/react/overview/material-dashboard/?ref=readme-mdpr)
+- [License Agreement](https://www.creative-tim.com/license?ref=readme-mdpr)
+- [Support](https://www.creative-tim.com/contact-us?ref=readme-mdpr)
+- Issues: [Github Issues Page](https://github.com/creativetimofficial/ct-material-dashboard-pro-react/issues)
 
 ## Reporting Issues
 
-We use GitHub Issues as the official bug tracker for the Material Dashboard React. Here are some advices for our users that want to report an issue:
+We use GitHub Issues as the official bug tracker for the Material Dashboard 2 PRO React. Here are some advices for our users that want to report an issue:
 
-1. Make sure that you are using the latest version of the Material Dashboard React. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/product/material-dashboard-react?ref=readme-mdr).
+1. Make sure that you are using the latest version of the Material Dashboard 2 PRO React. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/product/material-dashboard-pro-react?ref=readme-mdpr).
 2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
 3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
 
 ## Technical Support or Questions
 
-If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us?ref=readme-mdr) instead of opening an issue.
+If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us?ref=readme-mdpr) instead of opening an issue.
 
 ## Licensing
 
-- Copyright 2021 [Creative Tim](https://www.creative-tim.com?ref=readme-mdr)
-- Creative Tim [license](https://www.creative-tim.com/license?ref=readme-mdr)
+- Copyright 2022 [Creative Tim](https://www.creative-tim.com?ref=readme-mdpr)
+- Creative Tim [license](https://www.creative-tim.com/license?ref=readme-mdpr)
 
 ## Useful Links
 
-- [More products](https://www.creative-tim.com/templates?ref=readme-mdr) from Creative Tim
+- [More products](https://www.creative-tim.com/templates?ref=readme-mdpr) from Creative Tim
 
 - [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
 
-- [Freebies](https://www.creative-tim.com/bootstrap-themes/free?ref=readme-mdr) from Creative Tim
+- [Freebies](https://www.creative-tim.com/bootstrap-themes/free?ref=readme-mdpr) from Creative Tim
 
-- [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=readme-mdr) (earn money)
+- [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=readme-mdpr) (earn money)
 
 ##### Social Media
 

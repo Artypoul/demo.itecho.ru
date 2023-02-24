@@ -1,9 +1,9 @@
 /**
 =========================================================
-* Material Dashboard 2 React - v2.1.0
+* Material Dashboard 2 PRO React - v2.1.0
 =========================================================
 
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
+* Product Page: https://www.creative-tim.com/product/material-dashboard-pro-react
 * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
@@ -19,12 +19,15 @@ import PropTypes from "prop-types";
 // @mui material components
 import Grid from "@mui/material/Grid";
 
-// Material Dashboard 2 React components
+// Material Dashboard 2 PRO React components
 import MDBox from "components/MDBox";
 
-// Material Dashboard 2 React example components
+// Material Dashboard 2 PRO React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import PageLayout from "examples/LayoutContainers/PageLayout";
+
+// Material Dashboard 2 PRO React page layout routes
+import pageRoutes from "page.routes";
 
 // Authentication pages components
 import Footer from "layouts/authentication/components/Footer";
@@ -33,12 +36,14 @@ function BasicLayout({ image, children }) {
   return (
     <PageLayout>
       <DefaultNavbar
+        routes={pageRoutes}
         action={{
           type: "external",
-          route: "https://creative-tim.com/product/material-dashboard-react",
-          label: "free download",
-          color: "dark",
+          route: "https://creative-tim.com/product/material-dashboard-pro-react",
+          label: "buy now",
         }}
+        transparent
+        light
       />
       <MDBox
         position="absolute"
