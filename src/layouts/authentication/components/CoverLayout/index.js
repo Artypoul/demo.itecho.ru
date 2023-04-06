@@ -24,7 +24,7 @@ import MDBox from "components/MDBox";
 // import MDTypography from "components/MDTypography";
 
 // Material Dashboard 2 PRO React examples
-import PageLayout from "examples/LayoutContainers/PageLayout";
+import PageLayout from "layouts/templates/LayoutContainers/PageLayout";
 
 // Authentication layout components
 import Footer from "layouts/authentication/components/Footer";

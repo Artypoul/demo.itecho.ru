@@ -134,7 +134,7 @@ function Cover() {
 								Не зарегистрированы?{" "}
 								<MDTypography
 									component={Link}
-									to="/authentication/sign-up/cover"
+									to="/authentication/sign-up"
 									variant="button"
 									color="primary"
 									fontWeight="medium"

@@ -27,8 +27,8 @@ import { ThemeProvider } from "@mui/material/styles";
 import MDBox from "components/MDBox";
 
 // Material Dashboard 2 PRO React examples
-import Configurator from "examples/Configurator";
-import Sidenav from "examples/Sidenav";
+import Configurator from "layouts/templates/Configurator";
+import Sidenav from "layouts/templates/Sidenav";
 
 // Material Dashboard 2 PRO React themes
 import theme from "assets/theme";
@@ -56,6 +56,7 @@ import {
 // Images
 import brandDark from "assets/images/logo-ct-dark.png";
 import brandWhite from "assets/images/logo-ct.png";
+import brandItecho from "assets/images/logo-itecho.svg";
 
 export default function App() {
 	const [controller, dispatch] = useMaterialUIController();
@@ -197,12 +198,13 @@ export default function App() {
 				<>
 					<Sidenav
 						color={sidenavColor}
-						brand={
-							(transparentSidenav && !darkMode) || whiteSidenav
-								? brandDark
-								: brandWhite
-						}
-						brandName="Material Dashboard PRO"
+						// brand={
+						// 	(transparentSidenav && !darkMode) || whiteSidenav
+						// 		? brandDark
+						// 		: brandWhite
+						// }
+						brand={brandItecho}
+						brandName="Itecho demo"
 						routes={routes}
 						onMouseEnter={handleOnMouseEnter}
 						onMouseLeave={handleOnMouseLeave}
@@ -214,7 +216,10 @@ export default function App() {
 			{layout === "vr" && <Configurator />}
 			<Routes>
 				{getRoutes(routes)}
-				<Route path="*" element={<Navigate to="/dashboards/analytics" />} />
+				<Route
+					path="*"
+					element={<Navigate to="/application/analytics" />}
+				/>
 			</Routes>
 		</ThemeProvider>
 	);

@@ -19,7 +19,7 @@ import { useState } from "react";
 import Container from "@mui/material/Container";
 
 // Material Dashboard 2 PRO React examples
-import PageLayout from "examples/LayoutContainers/PageLayout";
+import PageLayout from "layouts/templates/LayoutContainers/PageLayout";
 
 // Pricing page components
 import Header from "layouts/pages/pricing-page/components/Header";
@@ -29,31 +29,31 @@ import TrustedBrands from "layouts/pages/pricing-page/components/TrustedBrands";
 import Faq from "layouts/pages/pricing-page/components/Faq";
 
 function PricingPage() {
-  const [tabValue, setTabValue] = useState(0);
-  const [prices, setPrices] = useState(["59", "89", "99"]);
+	const [tabValue, setTabValue] = useState(0);
+	const [prices, setPrices] = useState(["59", "89", "99"]);
 
-  const handleSetTabValue = (event, newValue) => {
-    setTabValue(newValue);
+	const handleSetTabValue = (event, newValue) => {
+		setTabValue(newValue);
 
-    if (event.currentTarget.id === "annual") {
-      setPrices(["119", "159", "399"]);
-    } else {
-      setPrices(["59", "89", "99"]);
-    }
-  };
+		if (event.currentTarget.id === "annual") {
+			setPrices(["119", "159", "399"]);
+		} else {
+			setPrices(["59", "89", "99"]);
+		}
+	};
 
-  return (
-    <PageLayout>
-      <Header tabValue={tabValue} tabHandler={handleSetTabValue}>
-        <Container>
-          <PricingCards prices={prices} />
-          <TrustedBrands />
-          <Faq />
-        </Container>
-      </Header>
-      <Footer />
-    </PageLayout>
-  );
+	return (
+		<PageLayout>
+			<Header tabValue={tabValue} tabHandler={handleSetTabValue}>
+				<Container>
+					<PricingCards prices={prices} />
+					<TrustedBrands />
+					<Faq />
+				</Container>
+			</Header>
+			<Footer />
+		</PageLayout>
+	);
 }
 
 export default PricingPage;
