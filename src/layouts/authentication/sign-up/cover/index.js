@@ -40,7 +40,7 @@ function Cover() {
 	const [password, setPassword] = useState("");
 
 	const handleGoToAnalytics = () => {
-		if (name && email && password) navigate("/dashboards/analytics");
+		if (name && email && password) navigate("/application/analytics");
 	};
 
 	const handleNameChange = event => setName(event.target.value);

@@ -42,7 +42,7 @@ function Cover() {
 
 	const handleSetRememberMe = () => setRememberMe(!rememberMe);
 	const handleGoToAnalytics = () => {
-		if (login && password) navigate("/dashboards/analytics");
+		if (login && password) navigate("/application/analytics");
 	};
 	const handleLoginChange = event => setLogin(event.target.value);
 	const handlePasswordChange = event => setPassword(event.target.value);
