@@ -28,8 +28,8 @@ const defaultLineChartData = {
 	],
 	datasets: [
 		{
-			label: "Facebook Ads",
-			color: "info",
+			label: "Яндекс",
+			color: "primary",
 			data: [50, 100, 200, 190, 400, 350, 500, 450, 700],
 		},
 		{

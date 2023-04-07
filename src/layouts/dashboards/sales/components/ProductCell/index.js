@@ -22,31 +22,40 @@ import MDTypography from "components/MDTypography";
 import MDAvatar from "components/MDAvatar";
 
 function ProductCell({ image, name, orders }) {
-  return (
-    <MDBox display="flex" alignItems="center" pr={2}>
-      <MDBox mr={2}>
-        <MDAvatar src={image} alt={name} />
-      </MDBox>
-      <MDBox display="flex" flexDirection="column">
-        <MDTypography variant="button" fontWeight="medium">
-          {name}
-        </MDTypography>
-        <MDTypography variant="button" fontWeight="regular" color="secondary">
-          <MDTypography component="span" variant="button" fontWeight="regular" color="success">
-            {orders}
-          </MDTypography>{" "}
-          orders
-        </MDTypography>
-      </MDBox>
-    </MDBox>
-  );
+	return (
+		<MDBox display="flex" alignItems="center" pr={2}>
+			<MDBox mr={2}>
+				<MDAvatar src={image} alt={name} />
+			</MDBox>
+			<MDBox display="flex" flexDirection="column">
+				<MDTypography variant="button" fontWeight="medium">
+					{name}
+				</MDTypography>
+				<MDTypography
+					variant="button"
+					fontWeight="regular"
+					color="secondary"
+				>
+					<MDTypography
+						component="span"
+						variant="button"
+						fontWeight="regular"
+						color="success"
+					>
+						{orders}
+					</MDTypography>{" "}
+					Заказов
+				</MDTypography>
+			</MDBox>
+		</MDBox>
+	);
 }
 
 // Typechecking props for the ProductCell
 ProductCell.propTypes = {
-  image: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  orders: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+	image: PropTypes.string.isRequired,
+	name: PropTypes.string.isRequired,
+	orders: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
 };
 
 export default ProductCell;

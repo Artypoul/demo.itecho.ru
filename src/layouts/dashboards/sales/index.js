@@ -51,11 +51,11 @@ import dataTableData from "layouts/dashboards/sales/data/dataTableData";
 function Sales() {
 	// DefaultStatisticsCard state for the dropdown value
 	const [salesDropdownValue, setSalesDropdownValue] =
-		useState("6 May - 7 May");
+		useState("6 Мая - 7 Мая");
 	const [customersDropdownValue, setCustomersDropdownValue] =
-		useState("6 May - 7 May");
+		useState("6 Мая - 7 Мая");
 	const [revenueDropdownValue, setRevenueDropdownValue] =
-		useState("6 May - 7 May");
+		useState("6 Мая - 7 Мая");
 
 	// DefaultStatisticsCard state for the dropdown action
 	const [salesDropdown, setSalesDropdown] = useState(null);
@@ -92,9 +92,9 @@ function Sales() {
 			keepMounted
 			disableAutoFocusItem
 		>
-			<MenuItem onClick={close}>Last 7 days</MenuItem>
-			<MenuItem onClick={close}>Last week</MenuItem>
-			<MenuItem onClick={close}>Last 30 days</MenuItem>
+			<MenuItem onClick={close}>За 5 дней</MenuItem>
+			<MenuItem onClick={close}>За неделю</MenuItem>
+			<MenuItem onClick={close}>За 30 дней</MenuItem>
 		</Menu>
 	);
 
@@ -106,12 +106,12 @@ function Sales() {
 					<Grid container spacing={3}>
 						<Grid item xs={12} sm={4}>
 							<DefaultStatisticsCard
-								title="sales"
-								count="$230,220"
+								title="Продажи"
+								count="201 232,00₽"
 								percentage={{
 									color: "success",
 									value: "+55%",
-									label: "since last month",
+									label: "с прошлого месяца",
 								}}
 								dropdown={{
 									action: openSalesDropdown,
@@ -122,12 +122,12 @@ function Sales() {
 						</Grid>
 						<Grid item xs={12} sm={4}>
 							<DefaultStatisticsCard
-								title="customers"
-								count="3.200"
+								title="Клиенты"
+								count="3 200"
 								percentage={{
 									color: "success",
 									value: "+12%",
-									label: "since last month",
+									label: "с прошлого месяца",
 								}}
 								dropdown={{
 									action: openCustomersDropdown,
@@ -141,12 +141,12 @@ function Sales() {
 						</Grid>
 						<Grid item xs={12} sm={4}>
 							<DefaultStatisticsCard
-								title="avg. revenue"
-								count="$1.200"
+								title="Средний чек"
+								count="16 000₽"
 								percentage={{
-									color: "secondary",
-									value: "+$213",
-									label: "since last month",
+									color: "success",
+									value: "+12%",
+									label: "с прошлого месяца",
 								}}
 								dropdown={{
 									action: openRevenueDropdown,
@@ -167,14 +167,14 @@ function Sales() {
 						</Grid>
 						<Grid item xs={12} sm={6} lg={8}>
 							<DefaultLineChart
-								title="Revenue"
+								title="Доход"
 								description={
 									<MDBox display="flex" justifyContent="space-between">
 										<MDBox display="flex" ml={-1}>
 											<MDBadgeDot
-												color="info"
+												color="primary"
 												size="sm"
-												badgeContent="Facebook Ads"
+												badgeContent="Яндекс"
 											/>
 											<MDBadgeDot
 												color="dark"
@@ -189,7 +189,7 @@ function Sales() {
 											right="1.5rem"
 										>
 											<Tooltip
-												title="See which ads perform better"
+												title="Посмотреть, какие рекламные объявления работают лучше"
 												placement="left"
 												arrow
 											>
@@ -215,13 +215,13 @@ function Sales() {
 					<Grid container spacing={3}>
 						<Grid item xs={12} lg={8}>
 							<HorizontalBarChart
-								title="Sales by age"
+								title="Продажи по годам"
 								chart={horizontalBarChartData}
 							/>
 						</Grid>
 						<Grid item xs={12} lg={4}>
 							<SalesTable
-								title="Sales by Country"
+								title="Продажи по регионам"
 								rows={salesTableData}
 							/>
 						</Grid>
@@ -232,7 +232,7 @@ function Sales() {
 						<Card>
 							<MDBox pt={3} px={3}>
 								<MDTypography variant="h6" fontWeight="medium">
-									Top Selling Products
+									Топ заказчиков
 								</MDTypography>
 							</MDBox>
 							<MDBox py={1}>

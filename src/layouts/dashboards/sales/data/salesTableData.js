@@ -14,30 +14,39 @@ Coded by www.creative-tim.com
 */
 
 // Countries flags
-import US from "assets/images/icons/flags/US.png";
-import DE from "assets/images/icons/flags/DE.png";
-import GB from "assets/images/icons/flags/GB.png";
-import BR from "assets/images/icons/flags/BR.png";
-import AU from "assets/images/icons/flags/AU.png";
+import locationOn from "assets/images/icons/location.svg";
 
 const salesTableData = [
+	// {
+	// 	country: [US, "united state"],
+	// 	sales: 2500,
+	// 	bounce: "29.9%",
+	// },
 	{
-		country: [US, "united state"],
-		sales: 2500,
-		bounce: "29.9%",
+		Филиал: [locationOn, "Новосибирск"],
+		Сумма: "672,91р",
+		Заполнение: "85%",
 	},
 	{
-		country: [DE, "germany"],
-		sales: "3.900",
-		bounce: "40.22%",
+		Филиал: [locationOn, "Екатеринбург"],
+		Сумма: "512,68р",
+		Заполнение: "75%",
 	},
 	{
-		country: [GB, "great britain"],
-		sales: "1.400",
-		bounce: "23.44%",
+		Филиал: [locationOn, "Донецк"],
+		Сумма: "455,42р",
+		Заполнение: "23%",
 	},
-	{ country: ["brasil"], sales: 562, bounce: "32.14%" },
-	{ country: [AU, "australia"], sales: 400, bounce: "56.83%" },
+	{
+		Филиал: [locationOn, "Москва"],
+		Сумма: "286,98р",
+		Заполнение: "85%",
+	},
+	{
+		Филиал: [locationOn, "Владивосток"],
+		Сумма: "622,21р",
+		Заполнение: "94%",
+	},
 ];
 
 export default salesTableData;

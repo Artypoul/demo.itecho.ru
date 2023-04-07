@@ -552,46 +552,45 @@ const routes = [
 		],
 	},
 	{ type: "divider", key: "divider-0" },
+
 	{
 		type: "collapse",
-		name: "Личный кабинет",
-		key: "Личный кабинет",
-		icon: <Icon fontSize="medium">dashboard</Icon>,
-		collapse: [
-			{
-				name: "Аналитика",
-				key: "Аналитика",
-				route: "/application/analytics",
-				component: <Analytics />,
-			},
-			// ***
-			{
-				name: "Новая заявка",
-				key: "Новая заявка",
-				route: "/application/analytics",
-				component: <Analytics />,
-			},
-			// ***
-			{
-				name: "Отчеты",
-				key: "Отчеты",
-				route: "/application/analytics",
-				component: <Analytics />,
-			},
-			{
-				name: "Продажи",
-				key: "Продажи",
-				route: "/application/sales",
-				component: <Sales />,
-			},
-			// ***
-			{
-				name: "Меню",
-				key: "Меню",
-				route: "/application/analytics",
-				component: <Analytics />,
-			},
-		],
+		noCollapse: true,
+		icon: <Icon fontSize="medium">analytics</Icon>,
+		name: "Аналитика",
+		key: "Аналитика",
+		route: "/application/analytics",
+
+		component: <Analytics />,
+	},
+	// ***
+	{
+		type: "collapse",
+		noCollapse: true,
+		icon: <Icon fontSize="medium">add-Circle</Icon>,
+		name: "Новая заявка",
+		key: "Новая заявка",
+		route: "/application/analytics",
+		component: <Analytics />,
+	},
+	// ***
+	{
+		type: "collapse",
+		noCollapse: true,
+		icon: <Icon fontSize="medium">summarize</Icon>,
+		name: "Отчеты",
+		key: "Отчеты",
+		route: "/application/analytics",
+		component: <Analytics />,
+	},
+	{
+		type: "collapse",
+		noCollapse: true,
+		icon: <Icon fontSize="medium">payment</Icon>,
+		name: "Продажи",
+		key: "Продажи",
+		route: "/application/sales",
+		component: <Sales />,
 	},
 	{ type: "divider", key: "divider-0" },
 	{

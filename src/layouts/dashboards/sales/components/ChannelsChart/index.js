@@ -45,8 +45,12 @@ function ChannelsChart() {
 				pt={2}
 				px={2}
 			>
-				<MDTypography variant="h6">Channels</MDTypography>
-				<Tooltip title="See traffic channels" placement="bottom" arrow>
+				<MDTypography variant="h6">Каналы</MDTypography>
+				<Tooltip
+					title="Посмотреть источники трафика"
+					placement="bottom"
+					arrow
+				>
 					<MDButton
 						variant="outlined"
 						color="secondary"
@@ -66,31 +70,27 @@ function ChannelsChart() {
 					<Grid item xs={5}>
 						<MDBox pr={1}>
 							<MDBox mb={1}>
-								<MDBadgeDot
-									color="info"
-									size="sm"
-									badgeContent="Facebook"
-								/>
+								<MDBadgeDot color="info" size="sm" badgeContent="VK" />
 							</MDBox>
 							<MDBox mb={1}>
 								<MDBadgeDot
 									color="primary"
 									size="sm"
-									badgeContent="Direct"
+									badgeContent="Яндекс"
 								/>
 							</MDBox>
 							<MDBox mb={1}>
 								<MDBadgeDot
 									color="dark"
 									size="sm"
-									badgeContent="Organic"
+									badgeContent="Google Ads"
 								/>
 							</MDBox>
 							<MDBox mb={1}>
 								<MDBadgeDot
 									color="secondary"
 									size="sm"
-									badgeContent="Referral"
+									badgeContent="Реферал"
 								/>
 							</MDBox>
 						</MDBox>
@@ -107,9 +107,9 @@ function ChannelsChart() {
 			>
 				<MDBox width={{ xs: "100%", sm: "60%" }} lineHeight={1}>
 					<MDTypography variant="button" color="text" fontWeight="light">
-						More than <strong>1,200,000</strong> sales are made using
-						referral marketing, and <strong>700,000</strong> are from
-						social media.
+						Более <strong>1 200 000</strong> продаж совершено через
+						реферальные ссылки, <strong>700 000</strong> - через соц.
+						сети.
 					</MDTypography>
 				</MDBox>
 				<MDBox
@@ -117,9 +117,7 @@ function ChannelsChart() {
 					textAlign="right"
 					mt={{ xs: 2, sm: "auto" }}
 				>
-					<MDButton color={darkMode ? "white" : "light"}>
-						read more
-					</MDButton>
+					<MDButton color={darkMode ? "white" : "light"}>Детали</MDButton>
 				</MDBox>
 			</MDBox>
 		</Card>
