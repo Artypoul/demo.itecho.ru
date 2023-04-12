@@ -14,13 +14,13 @@ Coded by www.creative-tim.com
 */
 
 const form = {
-	formId: "new-user-form",
+	formId: "new-request-form",
 	formField: {
 		firstName: {
 			name: "firstName",
-			label: "ФИО",
+			label: "Введите ФИО или ИНН",
 			type: "text",
-			errorMsg: "First name is required.",
+			errorMsg: "ФИО или ИНН обязательны для заполнения",
 		},
 		lastName: {
 			name: "lastName",
@@ -63,7 +63,7 @@ const form = {
 			name: "address1",
 			label: "Улица, номер дома, индекс",
 			type: "text",
-			errorMsg: "Address is required.",
+			errorMsg: "Адрес обязателен для заполнения",
 		},
 		address2: {
 			name: "address2",
@@ -99,31 +99,39 @@ const form = {
 			label: "Instagram Account",
 			type: "text",
 		},
-		vk: {
-			name: "vk",
-			label: "ВК",
+		cargoLength: {
+			name: "cargoLength",
+			label: "Длина",
 			type: "text",
-			errorMsg: "Twitter profile is required.",
+			errorMsg: "Длина обязательна для заполнения",
 		},
-		ok: {
-			name: "ok",
-			label: "Ок",
+		cargoWidth: {
+			name: "cargoWidth",
+			label: "Ширина",
 			type: "text",
+			errorMsg: "Ширина обязательна для заполнения",
 		},
-		yapy: {
-			name: "yapy",
-			label: "yapy.ru",
+		cargoHeight: {
+			name: "cargoHeight",
+			label: "Высота",
 			type: "text",
+			errorMsg: "Высота обязательна для заполнения",
+		},
+		cargoWeight: {
+			name: "cargoWeight",
+			label: "Вес",
+			type: "text",
+			errorMsg: "Вес обязателен для заполнения",
 		},
 		publicEmail: {
 			name: "publicEmail",
 			label: "Public Email",
 			type: "email",
 		},
-		bio: {
-			name: "bio",
-			label: "Say a few words about who you are or what you’re working on.",
-			// placeholder: 'Say a few words about who you are or what you’re working on.',
+		note: {
+			name: "note",
+			label: "Введите рабочую информацию по грузу",
+			placeholder: "",
 		},
 	},
 };

@@ -14,13 +14,13 @@ Coded by www.creative-tim.com
 */
 
 const form = {
-	formId: "new-user-form",
+	formId: "new-client-form",
 	formField: {
 		firstName: {
 			name: "firstName",
-			label: "ФИО",
+			label: "Введите ФИО или ИНН",
 			type: "text",
-			errorMsg: "First name is required.",
+			errorMsg: "ФИО или ИНН обязательны для заполнения.",
 		},
 		lastName: {
 			name: "lastName",
@@ -32,18 +32,21 @@ const form = {
 			name: "company",
 			label: "ИНН",
 			type: "text",
+			errorMsg: "ИНН обязателен для заполнения.",
 		},
 		email: {
 			name: "email",
-			label: "Email ",
+			label: "Email",
 			type: "email",
-			errorMsg: "Email address is required.",
-			invalidMsg: "Your email address is invalid",
+			errorMsg: "Email обязателен для заполнения.",
+			// invalidMsg: "Your email address is invalid",
+			invalidMsg: "Ваш адрес электронной почты недействительный.",
 		},
 		referal: {
 			name: "referal",
 			label: "Реферал",
 			type: "text",
+			errorMsg: "Реферал обязателен для заполнения.",
 		},
 		password: {
 			name: "password",
@@ -63,7 +66,7 @@ const form = {
 			name: "address1",
 			label: "Улица, номер дома, индекс",
 			type: "text",
-			errorMsg: "Address is required.",
+			errorMsg: "Адрес обязателен для заполнения",
 		},
 		address2: {
 			name: "address2",
@@ -103,7 +106,6 @@ const form = {
 			name: "vk",
 			label: "ВК",
 			type: "text",
-			errorMsg: "Twitter profile is required.",
 		},
 		ok: {
 			name: "ok",
@@ -120,10 +122,10 @@ const form = {
 			label: "Public Email",
 			type: "email",
 		},
-		bio: {
-			name: "bio",
-			label: "Say a few words about who you are or what you’re working on.",
-			// placeholder: 'Say a few words about who you are or what you’re working on.',
+		note: {
+			name: "note",
+			label: "Напишите несколько слов для упрощения поиска",
+			placeholder: "",
 		},
 	},
 };

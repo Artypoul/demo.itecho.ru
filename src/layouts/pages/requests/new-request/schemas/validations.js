@@ -14,13 +14,12 @@ Coded by www.creative-tim.com
 */
 
 import * as Yup from "yup";
-import checkout from "layouts/pages/users/new-user/schemas/form";
+import checkout from "layouts/pages/requests/new-request/schemas/form";
 
 const {
 	formField: {
 		firstName,
 		lastName,
-		company,
 		email,
 		password,
 		repeatPassword,
@@ -28,9 +27,10 @@ const {
 		city,
 		zip,
 		twitter,
-		vk,
-		ok,
-		yapy,
+		cargoLength,
+		cargoWidth,
+		cargoHeight,
+		cargoWeight,
 	},
 } = checkout;
 
@@ -38,10 +38,9 @@ const validations = [
 	Yup.object().shape({
 		[firstName.name]: Yup.string().required(firstName.errorMsg),
 		// [lastName.name]: Yup.string().required(lastName.errorMsg),
-		[email.name]: Yup.string()
-			.required(email.errorMsg)
-			.email(email.invalidMsg),
-		[company.name]: Yup.string().required(company.errorMsg),
+		// [email.name]: Yup.string()
+		// 	.required(email.errorMsg)
+		// 	.email(email.invalidMsg),
 		// [password.name]: Yup.string().required(password.errorMsg).min(6, password.invalidMsg),
 		// [password.name]: Yup.string().required(password.errorMsg).min(6, password.invalidMsg),
 		// [repeatPassword.name]: Yup.string()
@@ -54,9 +53,10 @@ const validations = [
 		// [zip.name]: Yup.string().required(zip.errorMsg).min(6, zip.invalidMsg),
 	}),
 	Yup.object().shape({
-		[vk.name]: Yup.string().required(vk.errorMsg),
-		[ok.name]: Yup.string().required(ok.errorMsg),
-		[yapy.name]: Yup.string().required(yapy.errorMsg),
+		[cargoLength.name]: Yup.string().required(cargoLength.errorMsg),
+		[cargoWidth.name]: Yup.string().required(cargoWidth.errorMsg),
+		[cargoHeight.name]: Yup.string().required(cargoHeight.errorMsg),
+		[cargoWeight.name]: Yup.string().required(cargoWeight.errorMsg),
 	}),
 ];
 
