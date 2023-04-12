@@ -52,18 +52,22 @@ import Charts from "layouts/pages/charts";
 import Notifications from "layouts/pages/notifications";
 import Kanban from "layouts/applications/kanban";
 import Wizard from "layouts/applications/wizard";
-import DataTables from "layouts/applications/data-tables";
 import Calendar from "layouts/applications/calendar";
-import NewProduct from "layouts/ecommerce/products/new-product";
-import EditProduct from "layouts/ecommerce/products/edit-product";
-import ProductPage from "layouts/ecommerce/products/product-page";
+// import DataTables from "layouts/applications/data-tables";
+// import NewProduct from "layouts/ecommerce/products/new-product";
+// import EditProduct from "layouts/ecommerce/products/edit-product";
+// import ProductPage from "layouts/ecommerce/products/product-page";
 import OrderList from "layouts/ecommerce/orders/order-list";
 import OrderDetails from "layouts/ecommerce/orders/order-details";
-import SignInBasic from "layouts/authentication/sign-in/basic";
+// import NewOrder from "layouts/ecommerce/orders/new-order";
+// import SignInBasic from "layouts/authentication/sign-in/basic";
 import SignInCover from "layouts/authentication/sign-in/cover";
-import SignInIllustration from "layouts/authentication/sign-in/illustration";
+// import SignInIllustration from "layouts/authentication/sign-in/illustration";
 import SignUpCover from "layouts/authentication/sign-up/cover";
-import ResetCover from "layouts/authentication/reset-password/cover";
+// import ResetCover from "layouts/authentication/reset-password/cover";
+import ClientsList from "layouts/pages/clients/clients-list";
+import NewClient from "layouts/pages/clients/new-client";
+import RequestsList from "layouts/pages/requests/requests-list";
 
 // Material Dashboard 2 PRO React components
 import MDAvatar from "components/MDAvatar";
@@ -73,6 +77,7 @@ import Icon from "@mui/material/Icon";
 
 // Images
 import profilePicture from "assets/images/team-3.jpg";
+import NewRequest from "layouts/pages/requests/new-request";
 
 // const routes = [
 // 	{
@@ -560,20 +565,26 @@ const routes = [
 		name: "Аналитика",
 		key: "Аналитика",
 		route: "/application/analytics",
-
 		component: <Analytics />,
 	},
-	// ***
+	{
+		type: "collapse",
+		noCollapse: true,
+		name: "Клиенты",
+		icon: <Icon fontSize="medium">group</Icon>,
+		key: "clients",
+		route: "/application/clients",
+		component: <ClientsList />,
+	},
 	{
 		type: "collapse",
 		noCollapse: true,
 		icon: <Icon fontSize="medium">add-Circle</Icon>,
-		name: "Новая заявка",
-		key: "Новая заявка",
-		route: "/application/analytics",
-		component: <Analytics />,
+		name: "Заявки",
+		key: "Заявки",
+		route: "/application/requests",
+		component: <RequestsList />,
 	},
-	// ***
 	{
 		type: "collapse",
 		noCollapse: true,
@@ -599,6 +610,34 @@ const routes = [
 		route: "/authentication/sign-up",
 		component: <SignUpCover />,
 	},
+	{
+		name: "New Client",
+		key: "new-client",
+		route: "/application/clients/new-client",
+		component: <NewClient />,
+	},
+	{
+		name: "New Request",
+		key: "new-requrst",
+		route: "/application/requests/new-request",
+		component: <NewRequest />,
+	},
+	// {
+	// 	type: "collapse",
+	// 	noCollapse: true,
+	// 	name: "Order Details",
+	// 	key: "order-details",
+	// 	route: "/ecommerce/orders/order-details",
+	// 	component: <OrderDetails />,
+	// },
+	// {
+	// 	type: "collapse",
+	// 	noCollapse: true,
+	// 	name: "Product Page",
+	// 	key: "product-page",
+	// 	route: "/ecommerce/products/product-page",
+	// 	component: <ProductPage />,
+	// },
 ];
 
 export default routes;

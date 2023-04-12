@@ -23,24 +23,24 @@ import customer from "assets/images/icons/сustomer.svg";
 
 const dataTableData = {
 	columns: [
-		{ Header: "Название", accessor: "Название", width: "55%" },
-		{ Header: "Сумма", accessor: "Сумма" },
-		{ Header: "Прибыль", accessor: "Прибыль", align: "center" },
-		{ Header: "Вернулся", accessor: "Вернулся", align: "center" },
+		{ Header: "Название", accessor: "name", width: "55%" },
+		{ Header: "Сумма", accessor: "sum" },
+		{ Header: "Прибыль", accessor: "profit", align: "center" },
+		{ Header: "Вернулся", accessor: "returned", align: "center" },
 	],
 
 	rows: [
 		{
-			Название: (
+			name: (
 				<ProductCell
 					image={customer}
 					name="ООО “Прогресс-НСК"
 					orders={830}
 				/>
 			),
-			Сумма: <DefaultCell>130 992 ₽</DefaultCell>,
-			Прибыль: <DefaultCell>55 600 ₽</DefaultCell>,
-			Вернулся: (
+			sum: <DefaultCell>130 992 ₽</DefaultCell>,
+			profit: <DefaultCell>55 600 ₽</DefaultCell>,
+			returned: (
 				<RefundsCell
 					value={13}
 					icon={{ color: "success", name: "keyboard_arrow_up" }}
@@ -48,16 +48,16 @@ const dataTableData = {
 			),
 		},
 		{
-			Название: (
+			name: (
 				<ProductCell
 					image={customer}
 					name="ООО “ТРАНССТРОЙ”"
 					orders={128}
 				/>
 			),
-			Сумма: <DefaultCell>110 142 ₽</DefaultCell>,
-			Прибыль: <DefaultCell>46 564 ₽</DefaultCell>,
-			Вернулся: (
+			sum: <DefaultCell>110 142 ₽</DefaultCell>,
+			profit: <DefaultCell>46 564 ₽</DefaultCell>,
+			returned: (
 				<RefundsCell
 					value={40}
 					icon={{ color: "error", name: "keyboard_arrow_down" }}
@@ -65,16 +65,16 @@ const dataTableData = {
 			),
 		},
 		{
-			Название: (
+			name: (
 				<ProductCell
 					image={customer}
 					name="ООО “Новая компания”"
 					orders={242}
 				/>
 			),
-			Сумма: <DefaultCell>342 724 ₽</DefaultCell>,
-			Прибыль: <DefaultCell>180 454 ₽</DefaultCell>,
-			Вернулся: (
+			sum: <DefaultCell>342 724 ₽</DefaultCell>,
+			profit: <DefaultCell>180 454 ₽</DefaultCell>,
+			returned: (
 				<RefundsCell
 					value={54}
 					icon={{ color: "success", name: "keyboard_arrow_up" }}
@@ -82,16 +82,16 @@ const dataTableData = {
 			),
 		},
 		{
-			Название: (
+			name: (
 				<ProductCell
 					image={customer}
 					name="ООО ”Солнечный день”"
 					orders={521}
 				/>
 			),
-			Сумма: <DefaultCell>450 724 ₽</DefaultCell>,
-			Прибыль: <DefaultCell>178 454 ₽</DefaultCell>,
-			Вернулся: (
+			sum: <DefaultCell>450 724 ₽</DefaultCell>,
+			profit: <DefaultCell>178 454 ₽</DefaultCell>,
+			returned: (
 				<RefundsCell
 					value={5}
 					icon={{ color: "error", name: "keyboard_arrow_down" }}
@@ -99,12 +99,12 @@ const dataTableData = {
 			),
 		},
 		{
-			Название: (
+			name: (
 				<ProductCell image={customer} name="ООО ”Как дела”" orders={121} />
 			),
-			Сумма: <DefaultCell>89 344 ₽</DefaultCell>,
-			Прибыль: <DefaultCell>10 112 ₽</DefaultCell>,
-			Вернулся: (
+			sum: <DefaultCell>89 344 ₽</DefaultCell>,
+			profit: <DefaultCell>10 112 ₽</DefaultCell>,
+			returned: (
 				<RefundsCell
 					value={121}
 					icon={{ color: "success", name: "keyboard_arrow_up" }}

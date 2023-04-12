@@ -180,14 +180,14 @@ function DataTable({
 								renderInput={params => <MDInput {...params} />}
 							/>
 							<MDTypography variant="caption" color="secondary">
-								&nbsp;&nbsp;entries per page
+								&nbsp;&nbsp; строк на странице
 							</MDTypography>
 						</MDBox>
 					)}
 					{canSearch && (
 						<MDBox width="12rem" ml="auto">
 							<MDInput
-								placeholder="Search..."
+								placeholder="Поиск"
 								value={search}
 								size="small"
 								fullWidth
@@ -255,8 +255,8 @@ function DataTable({
 							color="secondary"
 							fontWeight="regular"
 						>
-							Showing {entriesStart} to {entriesEnd} of {rows.length}{" "}
-							entries
+							Показаны с {entriesStart} по {entriesEnd} из {rows.length}{" "}
+							строк
 						</MDTypography>
 					</MDBox>
 				)}

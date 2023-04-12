@@ -14,7 +14,7 @@ Coded by www.creative-tim.com
 */
 
 import * as Yup from "yup";
-import checkout from "layouts/pages/users/new-user/schemas/form";
+import checkout from "layouts/pages/clients/new-client/schemas/form";
 
 const {
 	formField: {
@@ -22,6 +22,7 @@ const {
 		lastName,
 		company,
 		email,
+		referal,
 		password,
 		repeatPassword,
 		address1,
@@ -42,6 +43,8 @@ const validations = [
 			.required(email.errorMsg)
 			.email(email.invalidMsg),
 		[company.name]: Yup.string().required(company.errorMsg),
+		[referal.name]: Yup.string().required(referal.errorMsg),
+
 		// [password.name]: Yup.string().required(password.errorMsg).min(6, password.invalidMsg),
 		// [password.name]: Yup.string().required(password.errorMsg).min(6, password.invalidMsg),
 		// [repeatPassword.name]: Yup.string()
@@ -54,9 +57,9 @@ const validations = [
 		// [zip.name]: Yup.string().required(zip.errorMsg).min(6, zip.invalidMsg),
 	}),
 	Yup.object().shape({
-		[vk.name]: Yup.string().required(vk.errorMsg),
-		[ok.name]: Yup.string().required(ok.errorMsg),
-		[yapy.name]: Yup.string().required(yapy.errorMsg),
+		// [vk.name]: Yup.string().required(vk.errorMsg),
+		// [ok.name]: Yup.string().required(ok.errorMsg),
+		// [yapy.name]: Yup.string().required(yapy.errorMsg),
 	}),
 ];
 
