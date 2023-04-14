@@ -14,6 +14,7 @@ Coded by www.creative-tim.com
 */
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 // @mui material components
 import Card from "@mui/material/Card";
@@ -31,13 +32,12 @@ import MDButton from "components/MDButton";
 import DashboardLayout from "layouts/templates/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "layouts/templates/Navbars/DashboardNavbar";
 import Footer from "layouts/templates/Footer";
-import DataTable from "layouts/templates/Tables/DataTable";
 
 // Data
-import dataTableData from "layouts/pages/requests/requests-list/data/dataTableData";
-import { Link } from "react-router-dom";
+import DataTable from "layouts/templates/Tables/DataTable";
+import dataTableData from "layouts/pages/clients/client-list/data/dataTableData";
 
-function RequestsTable() {
+function ClientList() {
 	const [menu, setMenu] = useState(null);
 
 	const openMenu = event => setMenu(event.currentTarget);
@@ -52,10 +52,8 @@ function RequestsTable() {
 			onClose={closeMenu}
 			keepMounted
 		>
-			<MenuItem onClick={closeMenu}>Статус: Выполнен</MenuItem>
-			<MenuItem onClick={closeMenu}>Статус: Бронь</MenuItem>
-			<MenuItem onClick={closeMenu}>Статус: Возвращен</MenuItem>
-			<MenuItem onClick={closeMenu}>Статус: Отменен</MenuItem>
+			<MenuItem onClick={closeMenu}>Статус: В сети</MenuItem>
+			<MenuItem onClick={closeMenu}>Статус: Не в сети</MenuItem>
 			<Divider sx={{ margin: "0.5rem 0" }} />
 			<MenuItem onClick={closeMenu}>
 				<MDTypography variant="button" color="error" fontWeight="regular">
@@ -79,9 +77,9 @@ function RequestsTable() {
 						variant="gradient"
 						color="info"
 						component={Link}
-						to="/application/requests/new-request"
+						to="/application/new-client"
 					>
-						Новая заявка
+						Новый клиент
 					</MDButton>
 					<MDBox display="flex">
 						<MDButton
@@ -104,10 +102,10 @@ function RequestsTable() {
 				<Card>
 					<MDBox p={3} lineHeight={1}>
 						<MDTypography variant="h5" fontWeight="medium">
-							Заявки
+							Клиенты
 						</MDTypography>
 						<MDTypography variant="button" color="text">
-							Просмотр заявок за текущую неделю
+							Клиентская база
 						</MDTypography>
 					</MDBox>
 					<DataTable table={dataTableData} canSearch />
@@ -118,4 +116,4 @@ function RequestsTable() {
 	);
 }
 
-export default RequestsTable;
+export default ClientList;

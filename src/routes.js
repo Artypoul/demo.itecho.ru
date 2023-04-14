@@ -56,18 +56,17 @@ import Calendar from "layouts/applications/calendar";
 // import DataTables from "layouts/applications/data-tables";
 // import NewProduct from "layouts/ecommerce/products/new-product";
 // import EditProduct from "layouts/ecommerce/products/edit-product";
-// import ProductPage from "layouts/ecommerce/products/product-page";
+import ProductPage from "layouts/ecommerce/products/product-page";
 import OrderList from "layouts/ecommerce/orders/order-list";
-import OrderDetails from "layouts/ecommerce/orders/order-details";
-// import NewOrder from "layouts/ecommerce/orders/new-order";
+// import OrderDetails from "layouts/ecommerce/orders/order-details";
+import NewOrder from "layouts/ecommerce/orders/new-order";
 // import SignInBasic from "layouts/authentication/sign-in/basic";
 import SignInCover from "layouts/authentication/sign-in/cover";
 // import SignInIllustration from "layouts/authentication/sign-in/illustration";
 import SignUpCover from "layouts/authentication/sign-up/cover";
 // import ResetCover from "layouts/authentication/reset-password/cover";
-import ClientsList from "layouts/pages/clients/clients-list";
+import ClientList from "layouts/pages/clients/client-list";
 import NewClient from "layouts/pages/clients/new-client";
-import RequestsList from "layouts/pages/requests/requests-list";
 
 // Material Dashboard 2 PRO React components
 import MDAvatar from "components/MDAvatar";
@@ -77,7 +76,6 @@ import Icon from "@mui/material/Icon";
 
 // Images
 import profilePicture from "assets/images/team-3.jpg";
-import NewRequest from "layouts/pages/requests/new-request";
 
 // const routes = [
 // 	{
@@ -575,21 +573,20 @@ const routes = [
 	{
 		type: "collapse",
 		name: "Заявки",
-		key: "requests",
+		key: "orders",
 		icon: <Icon fontSize="medium">add-Circle</Icon>,
-		// icon: <Icon fontSize="medium">dashboard</Icon>,
 		collapse: [
 			{
 				name: "Новая заявка",
-				key: "new-request",
-				route: "/application/requests/new-request",
-				component: <NewRequest />,
+				key: "new-order",
+				route: "/application/new-order",
+				component: <NewOrder />,
 			},
 			{
 				name: "Список заявок",
-				key: "requests-list",
-				route: "/application/requests/requests-list",
-				component: <RequestsList />,
+				key: "order-list",
+				route: "/application/order-list",
+				component: <OrderList />,
 			},
 		],
 	},
@@ -603,14 +600,14 @@ const routes = [
 			{
 				name: "Новый клиент",
 				key: "new-client",
-				route: "/application/clients/new-client",
+				route: "/application/new-client",
 				component: <NewClient />,
 			},
 			{
 				name: "База клиентов",
-				key: "clients-list",
-				route: "/application/clients/clients-list",
-				component: <ClientsList />,
+				key: "client-list",
+				route: "/application/client-list",
+				component: <ClientList />,
 			},
 		],
 	},
@@ -619,35 +616,25 @@ const routes = [
 		type: "collapse",
 		name: "Склад",
 		key: "warehouse",
-		icon: <Icon fontSize="medium">warehouse</Icon>,
-		// icon: <Icon fontSize="medium">dashboard</Icon>,
-		collapse: [
-			//
-		],
-	},
-	{
-		type: "collapse",
-		name: "Приемка груза",
-		key: "cargo-receiving",
 		icon: <Icon fontSize="medium">summarize</Icon>,
 		// icon: <Icon fontSize="medium">dashboard</Icon>,
 		collapse: [
 			{
 				name: "Новая заявка",
-				key: "new-request",
-				route: "/application/cargo-receiving/new-request",
-				component: <NewRequest />,
+				key: "new-order",
+				route: "/application/new-order",
+				component: <NewOrder />,
 			},
 			{
 				name: "Грузы",
-				key: "сargo",
-				route: "/application/cargo-receiving/сargo",
-				// component: <ClientsList />,
+				key: "cargo",
+				route: "/application/cargo",
+				// component: <ClientList />,
 			},
 			{
 				name: "Отчеты",
 				key: "reports",
-				route: "/application/cargo-receiving/reports",
+				route: "/application/reports",
 				// component: <Analytics />,
 			},
 		],
@@ -661,15 +648,21 @@ const routes = [
 		collapse: [
 			{
 				name: "Продажи",
-				key: "Продажи",
-				route: "/application/accountant/sales",
+				key: "sales",
+				route: "/application/sales",
 				component: <Sales />,
 			},
 			{
 				name: "Выгрузка в 1С",
 				key: "Export-to-1C",
 				route: "/application/accountant/Export-to-1C",
-				// component: <ClientsList />,
+				// component: <ClientList />,
+			},
+			{
+				name: "Отчеты",
+				key: "reports",
+				route: "/application/director/reports",
+				// component: <Analytics />,
 			},
 		],
 	},
@@ -683,7 +676,7 @@ const routes = [
 			{
 				name: "Продажи",
 				key: "sales",
-				route: "/application/director/sales",
+				route: "/application/sales",
 				component: <Sales />,
 			},
 			{
@@ -701,7 +694,12 @@ const routes = [
 		route: "/authentication/sign-up",
 		component: <SignUpCover />,
 	},
-
+	{
+		name: "Product Page",
+		key: "product-page",
+		route: "/application/product-page",
+		component: <ProductPage />,
+	},
 	// {
 	// 	type: "collapse",
 	// 	noCollapse: true,
@@ -709,14 +707,6 @@ const routes = [
 	// 	key: "order-details",
 	// 	route: "/ecommerce/orders/order-details",
 	// 	component: <OrderDetails />,
-	// },
-	// {
-	// 	type: "collapse",
-	// 	noCollapse: true,
-	// 	name: "Product Page",
-	// 	key: "product-page",
-	// 	route: "/ecommerce/products/product-page",
-	// 	component: <ProductPage />,
 	// },
 ];
 

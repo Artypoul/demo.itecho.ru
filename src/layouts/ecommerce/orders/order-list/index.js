@@ -15,6 +15,9 @@ Coded by www.creative-tim.com
 
 import { useState } from "react";
 
+// react-router-dom components
+import { Link } from "react-router-dom";
+
 // @mui material components
 import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
@@ -27,14 +30,14 @@ import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
 
-// Material Dashboard 2 PRO React examples
+// Material Dashboard 2 PRO React templates / examples
 import DashboardLayout from "layouts/templates/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "layouts/templates/Navbars/DashboardNavbar";
 import Footer from "layouts/templates/Footer";
-import DataTable from "layouts/templates/Tables/DataTable";
 
-// Data
+// Data ecommerce/orders/order-list
 import dataTableData from "layouts/ecommerce/orders/order-list/data/dataTableData";
+import DataTable from "layouts/ecommerce/orders/order-list/components/DataTable";
 
 function OrderList() {
 	const [menu, setMenu] = useState(null);
@@ -51,13 +54,14 @@ function OrderList() {
 			onClose={closeMenu}
 			keepMounted
 		>
-			<MenuItem onClick={closeMenu}>Status: Paid</MenuItem>
-			<MenuItem onClick={closeMenu}>Status: Refunded</MenuItem>
-			<MenuItem onClick={closeMenu}>Status: Canceled</MenuItem>
+			<MenuItem onClick={closeMenu}>Статус: Выполнен</MenuItem>
+			<MenuItem onClick={closeMenu}>Статус: Бронь</MenuItem>
+			<MenuItem onClick={closeMenu}>Статус: Возвращен</MenuItem>
+			<MenuItem onClick={closeMenu}>Статус: Отменен</MenuItem>
 			<Divider sx={{ margin: "0.5rem 0" }} />
 			<MenuItem onClick={closeMenu}>
 				<MDTypography variant="button" color="error" fontWeight="regular">
-					Remove Filter
+					Удалить Фильтр
 				</MDTypography>
 			</MenuItem>
 		</Menu>
@@ -73,8 +77,13 @@ function OrderList() {
 					alignItems="flex-start"
 					mb={2}
 				>
-					<MDButton variant="gradient" color="info">
-						new order
+					<MDButton
+						variant="gradient"
+						color="info"
+						component={Link}
+						to="/application/new-order"
+					>
+						Новая заявка
 					</MDButton>
 					<MDBox display="flex">
 						<MDButton
@@ -82,24 +91,28 @@ function OrderList() {
 							color="dark"
 							onClick={openMenu}
 						>
-							filters&nbsp;
+							Фильтры&nbsp;
 							<Icon>keyboard_arrow_down</Icon>
 						</MDButton>
 						{renderMenu}
 						<MDBox ml={1}>
 							<MDButton variant="outlined" color="dark">
 								<Icon>description</Icon>
-								&nbsp;export csv
+								&nbsp;Экспорт csv
 							</MDButton>
 						</MDBox>
 					</MDBox>
 				</MDBox>
 				<Card>
-					<DataTable
-						table={dataTableData}
-						entriesPerPage={false}
-						canSearch
-					/>
+					<MDBox p={3} lineHeight={1}>
+						<MDTypography variant="h5" fontWeight="medium">
+							Заявки
+						</MDTypography>
+						<MDTypography variant="button" color="text">
+							Просмотр заявок за текущую неделю
+						</MDTypography>
+					</MDBox>
+					<DataTable table={dataTableData} canSearch />
 				</Card>
 			</MDBox>
 			<Footer />

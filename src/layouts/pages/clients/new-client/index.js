@@ -43,13 +43,13 @@ import ClientAddress from "layouts/pages/clients/new-client/components/ClientAdd
 import ClientSocials from "layouts/pages/clients/new-client/components/ClientSocials";
 import ClientNote from "layouts/pages/clients/new-client/components/ClientNote";
 
-// NewClient layout schemas for form and form feilds
+// NewClient layout schemas for form and form feilds from clients/new-client/schemas
 import validations from "layouts/pages/clients/new-client/schemas/validations";
 import form from "layouts/pages/clients/new-client/schemas/form";
 import initialValues from "layouts/pages/clients/new-client/schemas/initialValues";
 
 function getSteps() {
-	return ["Информация", "Адрес", "Соцсети", "Готово"];
+	return ["Инфо", "Адрес", "Соцсети", "Готово"];
 }
 
 function getStepContent(stepIndex, formData) {
@@ -91,7 +91,7 @@ function NewClient() {
 		actions.resetForm();
 
 		// setActiveStep(0);
-		navigate("/application/clients");
+		navigate("/application/client-list");
 	};
 
 	const handleSubmit = (values, actions) => {

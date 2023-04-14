@@ -32,43 +32,43 @@ import StepLabel from "@mui/material/StepLabel";
 import MDBox from "components/MDBox";
 import MDButton from "components/MDButton";
 
-// Material Dashboard 2 PRO React examples
+// Material Dashboard 2 PRO React templates / examples
 import DashboardLayout from "layouts/templates/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "layouts/templates/Navbars/DashboardNavbar";
 import Footer from "layouts/templates/Footer";
 
-// NewRequest page components
-import RequestInfo from "layouts/pages/requests/new-request/components/RequestInfo";
-import RequestAddress from "layouts/pages/requests/new-request/components/RequestAddress";
-import RequestCargo from "layouts/pages/requests/new-request/components/RequestCargo";
-import RequestNote from "layouts/pages/requests/new-request/components/RequestNote";
+// NewOrder page components
+import OrderInfo from "layouts/ecommerce/orders/new-order/components/OrderInfo";
+import OrderAddress from "layouts/ecommerce/orders/new-order/components/OrderAddress";
+import OrderCargo from "layouts/ecommerce/orders/new-order/components/OrderCargo";
+import OrderNote from "layouts/ecommerce/orders/new-order/components/OrderNote";
 
-// NewRequest layout schemas for form and form fields
-import validations from "layouts/pages/requests/new-request/schemas/validations";
-import form from "layouts/pages/requests/new-request/schemas/form";
-import initialValues from "layouts/pages/requests/new-request/schemas/initialValues";
+// NewOrder layout schemas for form and form fields
+import validations from "layouts/ecommerce/orders/new-order/schemas/validations";
+import form from "layouts/ecommerce/orders/new-order/schemas/form";
+import initialValues from "layouts/ecommerce/orders/new-order/schemas/initialValues";
 
 function getSteps() {
-	return ["Информация", "Адрес", "Груз", "Готово"];
+	return ["Инфо", "Адрес", "Груз", "Готово"];
 }
 
 function getStepContent(stepIndex, formData) {
 	console.log(formData);
 	switch (stepIndex) {
 		case 0:
-			return <RequestInfo formData={formData} />;
+			return <OrderInfo formData={formData} />;
 		case 1:
-			return <RequestAddress formData={formData} />;
+			return <OrderAddress formData={formData} />;
 		case 2:
-			return <RequestCargo formData={formData} />;
+			return <OrderCargo formData={formData} />;
 		case 3:
-			return <RequestNote formData={formData} />;
+			return <OrderNote formData={formData} />;
 		default:
 			return null;
 	}
 }
 
-function NewRequest() {
+function NewOrder() {
 	const [activeStep, setActiveStep] = useState(0);
 	const steps = getSteps();
 	const { formId, formField } = form;
@@ -92,7 +92,7 @@ function NewRequest() {
 		actions.resetForm();
 
 		// setActiveStep(0);
-		navigate("/application/requests");
+		navigate("/application/orders-list");
 	};
 
 	const handleSubmit = (values, actions) => {
@@ -184,4 +184,4 @@ function NewRequest() {
 	);
 }
 
-export default NewRequest;
+export default NewOrder;

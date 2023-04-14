@@ -14,11 +14,12 @@ Coded by www.creative-tim.com
 */
 
 /* eslint-disable react/prop-types */
+
 // ProductsList page components
-import IdCell from "layouts/ecommerce/orders/order-list/components/IdCell";
-import DefaultCell from "layouts/ecommerce/orders/order-list/components/DefaultCell";
-import StatusCell from "layouts/ecommerce/orders/order-list/components/StatusCell";
-import CustomerCell from "layouts/ecommerce/orders/order-list/components/CustomerCell";
+import IdCell from "layouts/ecommerce/orders-default/order-list/components/IdCell";
+import DefaultCell from "layouts/ecommerce/orders-default/order-list/components/DefaultCell";
+import StatusCell from "layouts/ecommerce/orders-default/order-list/components/StatusCell";
+import CustomerCell from "layouts/ecommerce/orders-default/order-list/components/CustomerCell";
 
 // Images
 import team1 from "assets/images/team-1.jpg";
@@ -29,152 +30,174 @@ import team5 from "assets/images/team-5.jpg";
 import ivana from "assets/images/ivana-squares.jpg";
 
 const dataTableData = {
-  columns: [
-    { Header: "id", accessor: "id", Cell: ({ value }) => <IdCell id={value} /> },
-    {
-      Header: "date",
-      accessor: "date",
-      Cell: ({ value }) => <DefaultCell value={value} />,
-    },
-    {
-      Header: "status",
-      accessor: "status",
-      Cell: ({ value }) => {
-        let status;
+	columns: [
+		{
+			Header: "id",
+			accessor: "id",
+			Cell: ({ value }) => <IdCell id={value} />,
+		},
+		{
+			Header: "Дата",
+			accessor: "date",
+			Cell: ({ value }) => <DefaultCell value={value} />,
+		},
+		{
+			Header: "Статус",
+			accessor: "status",
+			Cell: ({ value }) => {
+				let status;
 
-        if (value === "paid") {
-          status = <StatusCell icon="done" color="success" status="Paid" />;
-        } else if (value === "refunded") {
-          status = <StatusCell icon="replay" color="dark" status="Refunded" />;
-        } else {
-          status = <StatusCell icon="close" color="error" status="Canceled" />;
-        }
+				if (value === "Выполнен") {
+					status = (
+						<StatusCell icon="done" color="success" status="Выполнен" />
+					);
+				} else if (value === "Бронь") {
+					status = (
+						<StatusCell icon="lock" color="success" status="Бронь" />
+					);
+				} else if (value === "Возвращен") {
+					status = (
+						<StatusCell icon="replay" color="dark" status="Возвращен" />
+					);
+				} else {
+					status = (
+						<StatusCell icon="close" color="error" status="Отменен" />
+					);
+				}
 
-        return status;
-      },
-    },
-    {
-      Header: "customer",
-      accessor: "customer",
-      Cell: ({ value: [name, data] }) => (
-        <CustomerCell image={data.image} color={data.color || "dark"} name={name} />
-      ),
-    },
-    {
-      Header: "product",
-      accessor: "product",
-      Cell: ({ value }) => {
-        const [name, data] = value;
+				return status;
+			},
+		},
+		{
+			Header: "Исполнитель",
+			accessor: "customer",
+			Cell: ({ value: [name, data] }) => (
+				<CustomerCell
+					image={data.image}
+					color={data.color || "dark"}
+					name={name}
+				/>
+			),
+		},
+		{
+			Header: "Продукт",
+			accessor: "product",
+			Cell: ({ value }) => {
+				const [name, data] = value;
 
-        return (
-          <DefaultCell
-            value={typeof value === "string" ? value : name}
-            suffix={data.suffix || false}
-          />
-        );
-      },
-    },
-    { Header: "revenue", accessor: "revenue", Cell: ({ value }) => <DefaultCell value={value} /> },
-  ],
+				return (
+					<DefaultCell
+						value={typeof value === "string" ? value : name}
+						suffix={data.suffix || false}
+					/>
+				);
+			},
+		},
+		{
+			Header: "Сумма",
+			accessor: "revenue",
+			Cell: ({ value }) => <DefaultCell value={value} />,
+		},
+	],
 
-  rows: [
-    {
-      id: "#10421",
-      date: "1 Nov, 10:20 AM",
-      status: "paid",
-      customer: ["Orlando Imieto", { image: team2 }],
-      product: "Nike Sport V2",
-      revenue: "$140,20",
-    },
-    {
-      id: "#10422",
-      date: "1 Nov, 10:53 AM",
-      status: "paid",
-      customer: ["Alice Murinho", { image: team1 }],
-      product: "Valvet T-shirt",
-      revenue: "$42,00",
-    },
-    {
-      id: "#10423",
-      date: "1 Nov, 11:13 AM",
-      status: "refunded",
-      customer: ["Michael Mirra", { image: "M" }],
-      product: ["Leather Wallet", { suffix: "+1 more" }],
-      revenue: "$25,50",
-    },
-    {
-      id: "#10424",
-      date: "1 Nov, 12:20 PM",
-      status: "paid",
-      customer: ["Andrew Nichel", { image: team3 }],
-      product: "Bracelet Onu-Lino",
-      revenue: "$19,40",
-    },
-    {
-      id: "#10425",
-      date: "1 Nov, 1:40 PM",
-      status: "canceled",
-      customer: ["Sebastian Koga", { image: team4 }],
-      product: ["Phone Case Pink", { suffix: "x 2" }],
-      revenue: "$44,90",
-    },
-    {
-      id: "#10426",
-      date: "1 Nov, 2:19 PM",
-      status: "paid",
-      customer: ["Laur Gilbert", { image: "L" }],
-      product: "Backpack Niver",
-      revenue: "$112,50",
-    },
-    {
-      id: "#10427",
-      date: "1 Nov, 3:42 AM",
-      status: "paid",
-      customer: ["Iryna Innda", { image: "I" }],
-      product: "Adidas Vio",
-      revenue: "$200,00",
-    },
-    {
-      id: "#10428",
-      date: "2 Nov, 9:32 AM",
-      status: "paid",
-      customer: ["Arrias Liunda", { image: "A" }],
-      product: "Airpods 2 Gen",
-      revenue: "$350,00",
-    },
-    {
-      id: "#10429",
-      date: "2 Nov, 10:14 AM",
-      status: "paid",
-      customer: ["Rugna Ilpio", { image: team5 }],
-      product: "Bracelet Warret",
-      revenue: "$15,00",
-    },
-    {
-      id: "#10430",
-      date: "2 Nov, 10:14 AM",
-      status: "refunded",
-      customer: ["Anna Landa", { image: ivana }],
-      product: ["Watter Bottle India", { suffix: "x 3" }],
-      revenue: "$25,00",
-    },
-    {
-      id: "#10431",
-      date: "2 Nov, 3:12 PM",
-      status: "paid",
-      customer: ["Karl Innas", { image: "K" }],
-      product: "Kitchen Gadgets",
-      revenue: "$164,90",
-    },
-    {
-      id: "#10432",
-      date: "2 Nov, 5:12 PM",
-      status: "paid",
-      customer: ["Oana Kilas", { image: "O", color: "info" }],
-      product: "Office Papers",
-      revenue: "$23,90",
-    },
-  ],
+	rows: [
+		{
+			id: "#10421",
+			date: "1 Ноя, 10:20",
+			status: "Выполнен",
+			customer: ["Вадим Пушилин", { image: team2 }],
+			product: "Контейнер",
+			revenue: "56 000₽",
+		},
+		{
+			id: "#10422",
+			date: "1 Ноя, 10:47",
+			status: "Бронь",
+			customer: ["Алиса Полищук", { image: team1 }],
+			product: "Контейнер",
+			revenue: "38 400₽",
+		},
+		{
+			id: "#10423",
+			date: "1 Ноя, 15:30",
+			status: "Возвращен",
+			customer: ["Анастасия Волочкова", { image: "A" }],
+			product: "Авто",
+			revenue: "421 000₽",
+		},
+		{
+			id: "#10424",
+			date: "2 Ноя, 15:30",
+			status: "Выполнен",
+			customer: ["Николай Гаськов", { image: team4 }],
+			product: "Контейнер",
+			revenue: "124 360₽",
+		},
+		{
+			id: "#10425",
+			date: "2 Ноя, 16:30",
+			status: "Отменен",
+			customer: ["Евгения Новикова", { image: team3 }],
+			product: "Авто",
+			revenue: "76 220₽",
+		},
+		{
+			id: "#10426",
+			date: "2 Ноя, 16:30",
+			status: "Выполнен",
+			customer: ["Василий Куприн", { image: "В" }],
+			product: "Авто",
+			revenue: "39 460₽",
+		},
+		{
+			id: "#10427",
+			date: "2 Ноя, 17:10",
+			status: "Бронь",
+			customer: ["Елизавета Петрова", { image: "E" }],
+			product: "Контейнер",
+			revenue: "33 300₽",
+		},
+		{
+			id: "#10428",
+			date: "3 Ноя, 14:30",
+			status: "Выполнен",
+			customer: ["Александр Кузнецов", { image: "A" }],
+			product: "Контейнер",
+			revenue: "192 400₽",
+		},
+		{
+			id: "#10429",
+			date: "4 Ноя, 11:19",
+			status: "Бронь",
+			customer: ["Андрей Морозов", { image: "A", color: "success" }],
+			product: "Авто",
+			revenue: "38 400₽",
+		},
+		{
+			id: "#10430",
+			date: "4 Ноя, 13:19",
+			status: "Возвращен",
+			customer: ["Ирина Васькова", { image: ivana }],
+			product: "Контейнер",
+			revenue: "82 900₽",
+		},
+		{
+			id: "#10431",
+			date: "2 Ноя, 15:55",
+			status: "Бронь",
+			customer: ["Мария Дроздова", { image: "М" }],
+			product: "Контейнер",
+			revenue: "98 210₽",
+		},
+		{
+			id: "#10432",
+			date: "5 Ноя, 19:10",
+			status: "Выполнен",
+			customer: ["Иван Бунин", { image: "И", color: "info" }],
+			product: "Авто",
+			revenue: "199 400₽",
+		},
+	],
 };
 
 export default dataTableData;

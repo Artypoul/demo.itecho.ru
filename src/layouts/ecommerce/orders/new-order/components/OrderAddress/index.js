@@ -28,7 +28,7 @@ import MDInput from "components/MDInput";
 // NewUser page components
 import FormField from "layouts/pages/users/new-user/components/FormField";
 
-function RequestAddress({ formData }) {
+function OrderAddress({ formData }) {
 	const { formField, values, errors, touched } = formData;
 	const { address1, address2, city, zip } = formField;
 	const {
@@ -107,8 +107,8 @@ function RequestAddress({ formData }) {
 }
 
 // typechecking props for Address
-RequestAddress.propTypes = {
+OrderAddress.propTypes = {
 	formData: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
 };
 
-export default RequestAddress;
+export default OrderAddress;

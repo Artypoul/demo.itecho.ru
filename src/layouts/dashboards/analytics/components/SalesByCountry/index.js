@@ -66,7 +66,7 @@ function SalesByCountry() {
 					<Grid item xs={12} md={5} lg={6} sx={{ mt: { xs: 5, lg: 0 } }}>
 						<VectorMap
 							map={ruMerc}
-							zoomOnScroll={false}
+							zoomOnScroll={true}
 							zoomButtons={false}
 							markersSelectable
 							backgroundColor="transparent"
@@ -122,8 +122,8 @@ function SalesByCountry() {
 							style={{
 								marginTop: "-1.5rem",
 							}}
-							onRegionTipShow={() => false}
-							onMarkerTipShow={() => false}
+							onRegionTipShow={() => true}
+							onMarkerTipShow={() => true}
 						/>
 					</Grid>
 				</Grid>

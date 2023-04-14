@@ -26,7 +26,7 @@ import MDTypography from "components/MDTypography";
 // NewUser page components
 import FormField from "layouts/pages/users/new-user/components/FormField";
 
-function RequestCargo({ formData }) {
+function OrderCargo({ formData }) {
 	const { formField, values, errors, touched } = formData;
 	const { cargoLength, cargoWidth, cargoHeight, cargoWeight } = formField;
 	const {
@@ -97,8 +97,8 @@ function RequestCargo({ formData }) {
 }
 
 // typechecking props for Socials
-RequestCargo.propTypes = {
+OrderCargo.propTypes = {
 	formData: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
 };
 
-export default RequestCargo;
+export default OrderCargo;

@@ -154,10 +154,11 @@ function Configurator() {
 			>
 				<MDBox>
 					<MDTypography variant="h5">
-						Material UI Configurator
+						Конфигуратор
+						{/* Material UI */}
 					</MDTypography>
 					<MDTypography variant="body2" color="text">
-						See our dashboard options.
+						Варианты панели инструментов.
 					</MDTypography>
 				</MDBox>
 
@@ -180,7 +181,7 @@ function Configurator() {
 
 			<MDBox pt={0.5} pb={3} px={3}>
 				<MDBox>
-					<MDTypography variant="h6">Sidenav Colors</MDTypography>
+					<MDTypography variant="h6">Цвета боковой панели</MDTypography>
 
 					<MDBox mb={0.5}>
 						{sidenavColors.map(color => (
@@ -235,9 +236,9 @@ function Configurator() {
 				</MDBox>
 
 				<MDBox mt={3} lineHeight={1}>
-					<MDTypography variant="h6">Sidenav Type</MDTypography>
+					<MDTypography variant="h6">Тип боковой панели</MDTypography>
 					<MDTypography variant="button" color="text">
-						Choose between different sidenav types.
+						Выберите тип боковой панели.
 					</MDTypography>
 
 					<MDBox
@@ -259,7 +260,7 @@ function Configurator() {
 									: sidenavTypeButtonsStyles
 							}
 						>
-							Dark
+							Темная
 						</MDButton>
 						<MDBox sx={{ mx: 1, width: "8rem", minWidth: "8rem" }}>
 							<MDButton
@@ -274,7 +275,7 @@ function Configurator() {
 										: sidenavTypeButtonsStyles
 								}
 							>
-								Transparent
+								Прозрачная
 							</MDButton>
 						</MDBox>
 						<MDButton
@@ -289,7 +290,7 @@ function Configurator() {
 									: sidenavTypeButtonsStyles
 							}
 						>
-							White
+							Светлая
 						</MDButton>
 					</MDBox>
 				</MDBox>
@@ -300,7 +301,9 @@ function Configurator() {
 					mt={3}
 					lineHeight={1}
 				>
-					<MDTypography variant="h6">Navbar Fixed</MDTypography>
+					<MDTypography variant="h6">
+						Фиксированная <br /> навигационная панель
+					</MDTypography>
 
 					<Switch checked={fixedNavbar} onChange={handleFixedNavbar} />
 				</MDBox>
@@ -311,7 +314,7 @@ function Configurator() {
 					alignItems="center"
 					lineHeight={1}
 				>
-					<MDTypography variant="h6">Sidenav Mini</MDTypography>
+					<MDTypography variant="h6">Боковая мини-панель</MDTypography>
 
 					<Switch checked={miniSidenav} onChange={handleMiniSidenav} />
 				</MDBox>
@@ -322,14 +325,14 @@ function Configurator() {
 					alignItems="center"
 					lineHeight={1}
 				>
-					<MDTypography variant="h6">Light / Dark</MDTypography>
+					<MDTypography variant="h6">Светлая / Темная</MDTypography>
 
 					<Switch checked={darkMode} onChange={handleDarkMode} />
 				</MDBox>
 				<Divider />
 
 				<MDBox mt={2} textAlign="center">
-					<MDBox mb={0.5}>
+					<MDBox mb={1}>
 						<MDTypography variant="h6">Наши контакты</MDTypography>
 					</MDBox>
 

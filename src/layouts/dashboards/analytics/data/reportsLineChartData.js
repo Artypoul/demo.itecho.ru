@@ -27,7 +27,7 @@ const reportsLineChartData = {
 			"Дек",
 		],
 		datasets: {
-			label: "Mobile apps",
+			label: "Продажи",
 			data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
 		},
 	},
@@ -44,7 +44,7 @@ const reportsLineChartData = {
 			"Дек",
 		],
 		datasets: {
-			label: "Desktop apps",
+			label: "Дебиторская задолженность",
 			data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
 		},
 	},

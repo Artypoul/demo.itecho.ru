@@ -14,11 +14,11 @@ Coded by www.creative-tim.com
 */
 
 /* eslint-disable react/prop-types */
-// ProductsList page components
-import IdCell from "layouts/ecommerce/orders/order-list/components/IdCell";
-import DefaultCell from "layouts/ecommerce/orders/order-list/components/DefaultCell";
-import StatusCell from "layouts/ecommerce/orders/order-list/components/StatusCell";
-import CustomerCell from "layouts/ecommerce/orders/order-list/components/CustomerCell";
+// OrderList-default page components
+import IdCell from "layouts/ecommerce/orders-default/order-list/components/IdCell";
+import DefaultCell from "layouts/ecommerce/orders-default/order-list/components/DefaultCell";
+import StatusCell from "layouts/ecommerce/orders-default/order-list/components/StatusCell";
+import CustomerCell from "layouts/ecommerce/orders-default/order-list/components/CustomerCell";
 
 // Images
 import team1 from "assets/images/team-1.jpg";

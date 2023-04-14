@@ -15,6 +15,9 @@ Coded by www.creative-tim.com
 
 import { useMemo, useEffect, useState } from "react";
 
+// react-router-dom components
+import { Link } from "react-router-dom";
+
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
@@ -223,7 +226,12 @@ function DataTable({
 					{page.map((row, key) => {
 						prepareRow(row);
 						return (
-							<TableRow hover {...row.getRowProps()}>
+							<TableRow
+								hover
+								component={Link}
+								to="/application/product-page"
+								{...row.getRowProps()}
+							>
 								{row.cells.map(cell => (
 									<DataTableBodyCell
 										noBorder={noEndBorder && rows.length - 1 === key}

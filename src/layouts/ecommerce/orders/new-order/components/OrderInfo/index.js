@@ -26,36 +26,35 @@ import MDTypography from "components/MDTypography";
 // NewUser page components
 import FormField from "layouts/pages/users/new-user/components/FormField";
 
-function RequestNote({ formData }) {
-	const { formField, values } = formData;
-	const { publicEmail, note } = formField;
-	const { publicEmail: publicEmailV, note: noteV } = values;
+function OrderInfo({ formData }) {
+	const { formField, values, errors, touched } = formData;
+	const { firstName, company, referal, email } = formField;
+	const {
+		firstName: firstNameV,
+		company: companyV,
+		referal: referalV,
+		email: emailV,
+	} = values;
 
 	return (
 		<MDBox>
-			<MDTypography variant="h5" fontWeight="bold">
-				Дополнительная информация
-			</MDTypography>
+			<MDBox lineHeight={0}>
+				<MDTypography variant="h5">Новая заявка</MDTypography>
+				<MDTypography variant="button" color="text">
+					Заполните информацию о клиенте
+				</MDTypography>
+			</MDBox>
 			<MDBox mt={1.625}>
-				<Grid container spacing={1}>
-					{/* <Grid item xs={ 12 }>
-            <FormField
-              type={ publicEmail.type }
-              label={ publicEmail.label }
-              name={ publicEmail.name }
-              value={ publicEmailV }
-              placeholder={ publicEmail.placeholder }
-            />
-          	</Grid> */}
-					<Grid item xs={12}>
+				<Grid container spacing={3}>
+					<Grid item xs={12} sm={12}>
 						<FormField
-							type={note.type}
-							label={note.label}
-							name={note.name}
-							value={noteV}
-							placeholder={note.placeholder}
-							multiline
-							rows={5}
+							type={firstName.type}
+							label={firstName.label}
+							name={firstName.name}
+							value={firstNameV}
+							placeholder={firstName.placeholder}
+							error={errors.firstName && touched.firstName}
+							success={firstNameV.length > 0 && !errors.firstName}
 						/>
 					</Grid>
 				</Grid>
@@ -64,9 +63,9 @@ function RequestNote({ formData }) {
 	);
 }
 
-// typechecking props for Profile
-RequestNote.propTypes = {
+// typechecking props for OrderInfo
+OrderInfo.propTypes = {
 	formData: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
 };
 
-export default RequestNote;
+export default OrderInfo;

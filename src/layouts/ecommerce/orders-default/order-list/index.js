@@ -14,7 +14,6 @@ Coded by www.creative-tim.com
 */
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
 
 // @mui material components
 import Card from "@mui/material/Card";
@@ -32,12 +31,12 @@ import MDButton from "components/MDButton";
 import DashboardLayout from "layouts/templates/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "layouts/templates/Navbars/DashboardNavbar";
 import Footer from "layouts/templates/Footer";
+import DataTable from "layouts/templates/Tables/DataTable";
 
 // Data
-import DataTable from "layouts/templates/Tables/DataTable";
-import dataTableData from "layouts/pages/clients/clients-list/data/dataTableData";
+import dataTableData from "layouts/ecommerce/orders/order-list/data/dataTableData";
 
-function ClientsList() {
+function OrderList() {
 	const [menu, setMenu] = useState(null);
 
 	const openMenu = event => setMenu(event.currentTarget);
@@ -52,12 +51,13 @@ function ClientsList() {
 			onClose={closeMenu}
 			keepMounted
 		>
-			<MenuItem onClick={closeMenu}>Статус: В сети</MenuItem>
-			<MenuItem onClick={closeMenu}>Статус: Не в сети</MenuItem>
+			<MenuItem onClick={closeMenu}>Status: Paid</MenuItem>
+			<MenuItem onClick={closeMenu}>Status: Refunded</MenuItem>
+			<MenuItem onClick={closeMenu}>Status: Canceled</MenuItem>
 			<Divider sx={{ margin: "0.5rem 0" }} />
 			<MenuItem onClick={closeMenu}>
 				<MDTypography variant="button" color="error" fontWeight="regular">
-					Удалить Фильтр
+					Remove Filter
 				</MDTypography>
 			</MenuItem>
 		</Menu>
@@ -73,13 +73,8 @@ function ClientsList() {
 					alignItems="flex-start"
 					mb={2}
 				>
-					<MDButton
-						variant="gradient"
-						color="info"
-						component={Link}
-						to="/application/clients/new-client"
-					>
-						Новый клиент
+					<MDButton variant="gradient" color="info">
+						new order
 					</MDButton>
 					<MDBox display="flex">
 						<MDButton
@@ -87,28 +82,24 @@ function ClientsList() {
 							color="dark"
 							onClick={openMenu}
 						>
-							Фильтры&nbsp;
+							filters&nbsp;
 							<Icon>keyboard_arrow_down</Icon>
 						</MDButton>
 						{renderMenu}
 						<MDBox ml={1}>
 							<MDButton variant="outlined" color="dark">
 								<Icon>description</Icon>
-								&nbsp;Экспорт csv
+								&nbsp;export csv
 							</MDButton>
 						</MDBox>
 					</MDBox>
 				</MDBox>
 				<Card>
-					<MDBox p={3} lineHeight={1}>
-						<MDTypography variant="h5" fontWeight="medium">
-							Клиенты
-						</MDTypography>
-						<MDTypography variant="button" color="text">
-							Клиентская база
-						</MDTypography>
-					</MDBox>
-					<DataTable table={dataTableData} canSearch />
+					<DataTable
+						table={dataTableData}
+						entriesPerPage={false}
+						canSearch
+					/>
 				</Card>
 			</MDBox>
 			<Footer />
@@ -116,4 +107,4 @@ function ClientsList() {
 	);
 }
 
-export default ClientsList;
+export default OrderList;
